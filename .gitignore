@@ -1,0 +1,165 @@
+# GenAI Learning Lab - .gitignore
+
+# ================================
+# Python
+# ================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ================================
+# Virtual Environments
+# ================================
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*_env/
+*_venv/
+
+# ================================
+# Environment Variables & API Keys
+# ================================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.key
+*.pem
+*-credentials.json
+config.local.*
+settings.local.*
+
+# ================================
+# Jupyter Notebooks
+# ================================
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# ================================
+# IDE and Editor Files
+# ================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.metadata
+.classpath
+.settings/
+
+# ================================
+# OS Files
+# ================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ================================
+# Logs and Temporary Files
+# ================================
+logs/
+*.log
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# ================================
+# AI Model Files (too large for git)
+# ================================
+*.pt
+*.pth
+*.onnx
+*.pb
+models/
+*.model
+*.bin
+model_cache/
+
+# ================================
+# Data Files (generated or large)
+# ================================
+data/raw/
+data/processed/
+*.csv
+*.json
+*.parquet
+*.h5
+*.hdf5
+
+# ================================
+# Generated Documentation
+# ================================
+docs/_build/
+docs/build/
+site/
+_site/
+
+# ================================
+# Cache Directories
+# ================================
+.cache/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ================================
+# Package Files
+# ================================
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# ================================
+# Publishing Artifacts
+# ================================
+publishing/build/
+publishing/output/
+*.pdf
+*.epub
+
+# ================================
+# Backup Files
+# ================================
+*.backup
+*.bak
+backups/
+
+# ================================
+# Keep Important Directories
+# ================================
+!concepts/.gitkeep
+!notebooks/.gitkeep
+!scripts/.gitkeep
+!templates/.gitkeep
