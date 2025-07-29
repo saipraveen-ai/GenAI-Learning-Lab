@@ -1,0 +1,31 @@
+flowchart LR
+    subgraph "Level 1: Rule-Based System"
+        R1["🔧 FIXED LOGIC"]
+        R2["Input → Rules → Output"]
+        R3["if temp < 18°C: turn_on_heater()"]
+        R4["❌ No Learning<br/>❌ No Memory<br/>❌ No Context"]
+    end
+    
+    subgraph "Level 2: AI Agent"
+        A1["🧠 INTELLIGENT AGENT"]
+        A2["Perception"] --> A3["Memory & Learning"]
+        A3 --> A4["Decision Making"]
+        A4 --> A5["Adaptive Action"]
+        A6["✅ Learns Patterns<br/>✅ Stores Memory<br/>✅ Adapts Behavior"]
+    end
+    
+    subgraph "Level 3: Agentic AI"
+        G1["🧠 AGENTIC ORCHESTRATOR"]
+        G2["Goal Understanding"] --> G3["Multi-Agent Planning"]
+        G3 --> G4["Context Integration"]
+        G4 --> G5["Coordinated Execution"]
+        G5 --> G6["Reflection & Learning"]
+        G7["✅ Goal-Oriented<br/>✅ Multi-Step Planning<br/>✅ Tool Integration<br/>✅ Continuous Learning"]
+    end
+    
+    R1 -.->|Evolution| A1
+    A1 -.->|Evolution| G1
+    
+    style R1 fill:#ffcccc
+    style A1 fill:#ccffcc  
+    style G1 fill:#ccccff

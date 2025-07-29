@@ -1,0 +1,41 @@
+flowchart TD
+    Goal["🎯 HIGH-LEVEL GOAL<br/>Keep room comfortable for sleeping"]
+    
+    subgraph Controller ["🧠 AGENTIC CONTROLLER"]
+        GoalUnder["GOAL UNDERSTANDING<br/>22°C by 10 PM + maintain"]
+    end
+    
+    Goal --> Controller
+    
+    Controller --> Perceive["PERCEIVE<br/>🌍"]
+    Controller --> Plan["PLAN<br/>📋"]
+    Controller --> Execute["EXECUTE<br/>🚀"]
+    
+    Perceive <--> Plan
+    Plan <--> Execute
+    
+    Perceive --> Reflect["REFLECT<br/>🧠"]
+    Plan --> Reflect
+    Execute --> Reflect
+    
+    Reflect --> Learn["LEARN<br/>🎓"]
+    Learn --> Perceive
+    
+    subgraph Tools ["🔧 TOOL INTEGRATIONS"]
+        Weather["🌤️ Weather API<br/>Outside: 28°C<br/>Cooling: 2-5°C/hr"]
+        Energy["📊 Energy API<br/>$0.247/kWh<br/>Peak: 18-21h"]
+        Sleep["😴 Sleep Tracker<br/>Bedtime: 22:00<br/>Quality: 8/10"]
+        Prefs["⚙️ User Prefs<br/>Target: 22°C<br/>Priority: Balanced"]
+    end
+    
+    Perceive --> Tools
+    Plan --> Tools
+    
+    style Goal fill:#e1f5fe
+    style Controller fill:#f3e5f5
+    style Perceive fill:#e8f5e8
+    style Plan fill:#fff3e0
+    style Execute fill:#ffebee
+    style Reflect fill:#f1f8e9
+    style Learn fill:#fce4ec
+    style Tools fill:#f5f5f5
