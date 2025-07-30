@@ -10,6 +10,16 @@ This repository is a structured course on AI/ML/Gen AI/Agents. Please assist in 
 
 Focus on practical applications, hands-on projects, and educational resources.
 
+## 🔄 Previous Workspace Context
+This project evolved from previous workspace sessions where we explored:
+- Fundamental differences between AI Agents and Agentic AI systems
+- Implementation of intelligence spectrum demonstrations
+- Creation of educational content with 4-file documentation structure
+- Development of working code examples and validation frameworks
+- Research-driven approach to AI concept exploration
+
+Current implementation includes complete concept: "Agentic AI vs AI Agents" with working demonstrations and comprehensive documentation.
+
 ## 📚 Documentation Structure Pattern for Concepts
 
 When creating or organizing concept documentation, follow this proven 4-file structure:
