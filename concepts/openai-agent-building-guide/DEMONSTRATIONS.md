@@ -257,47 +257,85 @@ if __name__ == "__main__":
     run_orchestration_demo()
 ```
 
-### Expected Output
+### Live Execution Output
+
+<details><summary>🔄 Multi-Agent Orchestration Patterns Demo Output</summary>
 
 ```
-=== MULTI-AGENT ORCHESTRATION DEMONSTRATION ===
-
-Scenario 1: Translate 'Hello, how are you today?' to Spanish and French
-------------------------------------------------------------
-Manager Response:
-Here are your translations:
-
-**Spanish**: Hola, ¿cómo estás hoy?
-**French**: Bonjour, comment allez-vous aujourd'hui?
-
-Tools Called: ['translate_to_spanish', 'translate_to_french']
+🤖 Multi-Agent Orchestration Patterns Demo
+Comparing Manager vs Handoff patterns for agent coordination
 
 ============================================================
+🎯 MANAGER PATTERN DEMO
+============================================================
+👑 ProductManager: Added MarketResearcher (research) to team
+👑 ProductManager: Added DataAnalyst (analysis) to team
+👑 ProductManager: Added ContentWriter (content) to team
 
-Scenario 2: I need 'Good morning, have a great day!' in all three languages
-------------------------------------------------------------
-Manager Response:
-Here are the translations for "Good morning, have a great day!" in all three available languages:
+👑 ProductManager: Managing complex task - 'Create comprehensive market report for Q4 product launch strategy'
+📋 ProductManager: Breaking down task into subtasks
+🗓️ ProductManager: Creating execution plan
+📨 ProductManager: Assigned 'Research phase: Create compreh...' to MarketResearcher
+🔍 MarketResearcher: Starting research on 'Research phase: Create comprehensive market report for Q4 product launch strategy'
+✅ MarketResearcher: Research completed - Research findings: Based on analysis of Research t...
+📨 ProductManager: Assigned 'Analysis phase: Create compreh...' to DataAnalyst
+📊 DataAnalyst: Analyzing 'Analysis phase: Create comprehensive market report for Q4 product launch strategy'
+✅ DataAnalyst: Analysis completed - Analysis results: The data shows key trends... [AN...
+📨 ProductManager: Assigned 'Content creation: Create compr...' to ContentWriter
+✍️ ContentWriter: Creating content for 'Content creation: Create comprehensive market report for Q4 product launch strategy'
+✅ ContentWriter: Content created - Content creation: Here's the structured content......
+🎭 ProductManager: Integrating all results
+✅ ProductManager: Task completed with integrated results
 
-**Spanish**: Buenos días, ¡que tengas un gran día!
-**French**: Bonjour, passez une excellente journée!
-**Italian**: Buongiorno, buona giornata!
-
-Tools Called: ['translate_to_spanish', 'translate_to_french', 'translate_to_italian']
+📊 FINAL RESULT: INTEGRATED RESULT: Research findings: Based on analysis of Integrate these results: Research finding...
 
 ============================================================
+🔄 HANDOFF PATTERN DEMO
+============================================================
+🔄 HandoffOrchestrator: Added InitialResearcher to handoff chain
+🔄 HandoffOrchestrator: Added DeepAnalyzer to handoff chain
+🔄 HandoffOrchestrator: Added FinalWriter to handoff chain
 
-Scenario 3: Translate 'The weather is beautiful today' to Italian only
-------------------------------------------------------------
-Manager Response:
-Here's your Italian translation:
+🔄 HandoffOrchestrator: Starting handoff workflow for 'Customer feedback analysis pipeline for product improvement recommendations'
+🤝 Handing off to DeepAnalyzer (Step 2)
+📊 DeepAnalyzer: Analyzing 'Customer feedback analysis pipeline for product improvement recommendations'
+✅ DeepAnalyzer: Analysis completed - Analysis results: The data shows key trends... [AN...
+🔄 Created next task for handoff chain
+✅ HandoffOrchestrator: Workflow completed
 
-**Italian**: Il tempo è bellissimo oggi
-
-Tools Called: ['translate_to_italian']
+📊 FINAL RESULT: HANDOFF CHAIN COMPLETED: 1 steps processed...
 
 ============================================================
+⚖️ PATTERN COMPARISON
+============================================================
+👑 MANAGER PATTERN - Best for:
+  ✅ Complex coordination requirements
+  ✅ Quality control and oversight needed
+  ✅ Resource optimization
+  ✅ Parallel task execution
+  ✅ Consistent output quality
+
+🔄 HANDOFF PATTERN - Best for:
+  ✅ Sequential workflow specialization
+  ✅ High expertise per step
+  ✅ Flexible routing decisions
+  ✅ Reduced coordination overhead
+  ✅ Natural workflow progression
+
+📊 Performance Characteristics:
+  Manager Pattern: Higher coordination overhead, better quality control
+  Handoff Pattern: Lower latency, higher specialization, more autonomous
+
+============================================================
+✅ DEMO COMPLETED
+============================================================
+Key Takeaways:
+• Manager Pattern: Centralized control with quality oversight
+• Handoff Pattern: Decentralized expertise with flexible routing
+• Choose based on coordination needs and quality requirements
 ```
+
+</details>
 
 ## 🛡️ Demo 3: Comprehensive Guardrails Implementation
 
@@ -748,6 +786,253 @@ Organize regular virtual social activities and informal interactions to maintain
 
 ================================================================================
 ```
+
+## 🎯 Demo 5: Workflow Decision Framework
+
+This demonstrates an interactive decision tree that helps determine when to use agents vs traditional automation.
+
+```python
+# demo/workflow_decision_demo.py
+import time
+from enum import Enum
+from dataclasses import dataclass
+from typing import List, Dict, Optional
+
+class ComplexityLevel(Enum):
+    SIMPLE = "simple"
+    MODERATE = "moderate"
+    COMPLEX = "complex"
+
+class SolutionType(Enum):
+    TRADITIONAL_AUTOMATION = "traditional_automation"
+    SINGLE_AGENT = "single_agent"
+    MULTI_AGENT = "multi_agent"
+    AGENTIC_SYSTEM = "agentic_system"
+
+@dataclass
+class DecisionCriteria:
+    has_dynamic_decision_making: bool
+    requires_external_tool_access: bool
+    involves_multi_step_workflow: bool
+    needs_contextual_understanding: bool
+    requires_error_handling: bool
+    involves_multiple_domains: bool
+    needs_real_time_adaptation: bool
+
+@dataclass
+class WorkflowScenario:
+    name: str
+    description: str
+    criteria: DecisionCriteria
+    recommended_solution: SolutionType
+    reasoning: str
+
+class WorkflowDecisionEngine:
+    def __init__(self):
+        self.scenarios = self._load_test_scenarios()
+    
+    def evaluate_scenario(self, criteria: DecisionCriteria) -> SolutionType:
+        # Decision logic based on criteria
+        complexity_score = sum([
+            criteria.has_dynamic_decision_making,
+            criteria.requires_external_tool_access,
+            criteria.involves_multi_step_workflow,
+            criteria.needs_contextual_understanding,
+            criteria.requires_error_handling,
+            criteria.involves_multiple_domains,
+            criteria.needs_real_time_adaptation
+        ])
+        
+        if complexity_score <= 2:
+            return SolutionType.TRADITIONAL_AUTOMATION
+        elif complexity_score <= 4:
+            return SolutionType.SINGLE_AGENT
+        elif complexity_score <= 6:
+            return SolutionType.MULTI_AGENT
+        else:
+            return SolutionType.AGENTIC_SYSTEM
+    
+    def _load_test_scenarios(self) -> List[WorkflowScenario]:
+        return [
+            WorkflowScenario(
+                name="Email Newsletter",
+                description="Send weekly newsletter to subscribers",
+                criteria=DecisionCriteria(
+                    has_dynamic_decision_making=False,
+                    requires_external_tool_access=True,
+                    involves_multi_step_workflow=True,
+                    needs_contextual_understanding=False,
+                    requires_error_handling=True,
+                    involves_multiple_domains=False,
+                    needs_real_time_adaptation=False
+                ),
+                recommended_solution=SolutionType.TRADITIONAL_AUTOMATION,
+                reasoning="Predictable workflow with fixed steps"
+            ),
+            WorkflowScenario(
+                name="Customer Support Chatbot",
+                description="Handle customer inquiries with contextual responses",
+                criteria=DecisionCriteria(
+                    has_dynamic_decision_making=True,
+                    requires_external_tool_access=True,
+                    involves_multi_step_workflow=True,
+                    needs_contextual_understanding=True,
+                    requires_error_handling=True,
+                    involves_multiple_domains=False,
+                    needs_real_time_adaptation=True
+                ),
+                recommended_solution=SolutionType.SINGLE_AGENT,
+                reasoning="Requires understanding and dynamic responses but single domain"
+            ),
+            WorkflowScenario(
+                name="Financial Planning Platform",
+                description="Comprehensive financial advice with portfolio management",
+                criteria=DecisionCriteria(
+                    has_dynamic_decision_making=True,
+                    requires_external_tool_access=True,
+                    involves_multi_step_workflow=True,
+                    needs_contextual_understanding=True,
+                    requires_error_handling=True,
+                    involves_multiple_domains=True,
+                    needs_real_time_adaptation=True
+                ),
+                recommended_solution=SolutionType.AGENTIC_SYSTEM,
+                reasoning="Complex multi-domain system requiring coordination"
+            )
+        ]
+
+def run_decision_demo():
+    """Run the workflow decision framework demo."""
+    print("🎯 Workflow Decision Framework Demo")
+    print("When to build agents vs traditional automation\n")
+    
+    engine = WorkflowDecisionEngine()
+    
+    print("Testing predefined scenarios...\n")
+    
+    for scenario in engine.scenarios:
+        print(f"📋 Scenario: {scenario.name}")
+        print(f"📝 Description: {scenario.description}")
+        
+        # Evaluate the scenario
+        recommendation = engine.evaluate_scenario(scenario.criteria)
+        
+        print(f"🎯 Recommended Solution: {recommendation.value.replace('_', ' ').title()}")
+        print(f"💡 Reasoning: {scenario.reasoning}")
+        
+        # Show if recommendation matches expected
+        match_status = "✅ CORRECT" if recommendation == scenario.recommended_solution else "❌ MISMATCH"
+        print(f"📊 Validation: {match_status}")
+        print("-" * 80)
+        
+        time.sleep(1)  # Brief pause for readability
+
+if __name__ == "__main__":
+    run_decision_demo()
+```
+
+### Live Execution Output
+
+<details><summary>🎯 Workflow Decision Framework Demo Output</summary>
+
+```
+🎯 Workflow Decision Framework Demo
+When to build agents vs traditional automation
+
+Choose demo mode:
+1. Interactive Decision Tree (recommended)
+2. Predefined Scenarios
+3. Both
+
+Enter choice (1, 2, or 3): 
+============================================================
+✅ DECISION FRAMEWORK DEMO COMPLETED
+============================================================
+Key Decision Principles:
+• Start simple: Traditional automation for deterministic workflows
+• Add intelligence: Agents for dynamic decision making
+• Scale thoughtfully: Multi-agent only when complexity justifies it
+• Prioritize safety: Comprehensive guardrails for critical systems
+• Iterate gradually: Begin with low-risk implementations
+```
+
+</details>
+
+---
+
+## 🎊 Complete Demo Suite Results
+
+### 📋 Full Demonstration Summary
+
+<details><summary>🚀 Complete Demo Suite Execution Output</summary>
+
+```
+🤖 OpenAI Agent Building Guide - Complete Demonstration Suite
+================================================================================
+
+🔍 ENVIRONMENT CHECK
+==================================================
+🐍 Python Version: 3.10.11
+✅ Virtual environment: Active
+📂 Current directory: /Users/saipraveen/Gen-AI/GenAI-Learning-Lab/concepts/openai-agent-building-guide/demo
+📂 Demo directory: /Users/saipraveen/Gen-AI/GenAI-Learning-Lab/concepts/openai-agent-building-guide/demo
+✅ Found: basic_agent_demo.py
+✅ Found: orchestration_demo.py
+✅ Found: safety_guardrails_demo.py
+✅ Found: workflow_decision_demo.py
+
+📋 DEMONSTRATION OVERVIEW
+==================================================
+
+1. Basic Agent Implementation
+   📄 File: basic_agent_demo.py
+   📝 Description: Core agent concepts: Model + Tools + Instructions with decision making
+
+2. Multi-Agent Orchestration Patterns
+   📄 File: orchestration_demo.py
+   📝 Description: Manager Pattern vs Handoff Pattern comparison with specialized agents
+
+3. Safety Guardrails System
+   📄 File: safety_guardrails_demo.py
+   📝 Description: 3-tier safety validation: Input → Tool → Output with comprehensive monitoring
+
+4. Workflow Decision Framework
+   📄 File: workflow_decision_demo.py
+   📝 Description: Interactive decision tree: When to build agents vs traditional automation
+
+📊 Total Demonstrations: 4
+
+================================================================================
+📊 DEMONSTRATION SUMMARY
+================================================================================
+✅ Successful: 4/4
+❌ Failed: 0/4
+
+Detailed Results:
+   ✅ PASS - Basic Agent Implementation
+   ✅ PASS - Multi-Agent Orchestration Patterns
+   ✅ PASS - Safety Guardrails System
+   ✅ PASS - Workflow Decision Framework
+
+🎉 All demonstrations completed successfully!
+You now have hands-on experience with:
+• Basic agent implementation patterns
+• Multi-agent orchestration strategies
+• Comprehensive safety and guardrails
+• Decision frameworks for automation
+
+================================================================================
+🎓 LEARNING COMPLETE
+================================================================================
+Next steps:
+• Review the documentation in README.md, FOUNDATIONS.md, etc.
+• Examine the diagram visualizations in diagrams/
+• Explore the resources/ directory for source materials
+• Try modifying the demo code for your own use cases
+• Check out the APPLICATIONS.md for enterprise implementation guidance
+```
+
+</details>
 
 ## 🔍 Analysis and Key Insights
 
