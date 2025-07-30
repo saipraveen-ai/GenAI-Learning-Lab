@@ -1,108 +1,31 @@
 ---
-title: OpenAI Agent Architecture
-description: Clear illustration of agent components, workflow, and safety layers
+title: "Simple Agent Architecture"
 ---
-flowchart TB
-    %% User Input
-    User([👤 User Input]) --> InputGuards{🛡️ Input Validation}
+flowchart TD
+    %% Simple linear flow
+    User[� User] --> Agent[🤖 Agent<br/>LLM + Instructions]
+    Agent --> Tools[🛠️ Tools]
+    Tools --> Safety[🛡️ Guardrails]
+    Safety --> Response[📤 Response]
+    Response --> User
     
-    %% Input Guardrails
-    InputGuards -->|✅ Safe & Relevant| AgentCore
-    InputGuards -->|❌ Blocked| BlockedResponse[🚫 Request Blocked]
+    %% Tool examples (simplified)
+    Tools --> Data[� Data Tools<br/>Read, Search, Query]
+    Tools --> Actions[⚡ Action Tools<br/>Send, Update, Call]
     
-    %% Core Agent Components
-    subgraph AgentCore [🤖 AGENT CORE]
-        direction TB
-        
-        subgraph Components [Core Components]
-            Model[🧠 LLM Model<br/>GPT-4, o1, etc.]
-            Tools[🛠️ Tool Registry<br/>APIs, Functions]
-            Instructions[📋 Instructions<br/>Prompts & Guidelines]
-        end
-        
-        %% Agent Decision Loop
-        Model <--> Tools
-        Model <--> Instructions
-        Tools <--> Instructions
-        
-        %% Workflow Execution
-        Components --> Reasoning{🤔 Reasoning & Planning}
-        Reasoning --> ToolSelection{🔧 Tool Selection}
-        ToolSelection --> Execution[⚡ Execute Action]
-        Execution --> Evaluation{✅ Evaluate Result}
-        Evaluation -->|Continue| Reasoning
-        Evaluation -->|Complete| OutputValidation
-    end
-    
-    %% Tool Safety Layer
-    ToolSelection --> ToolGuards{🛡️ Tool Safety Check}
-    ToolGuards -->|✅ Safe Tool| SafeExecution[✅ Safe Tool Execution]
-    ToolGuards -->|⚠️ High Risk| HumanApproval[👥 Human Approval Required]
-    ToolGuards -->|❌ Blocked| ToolBlocked[🚫 Tool Blocked]
-    
-    SafeExecution --> Execution
-    HumanApproval -->|✅ Approved| Execution
-    HumanApproval -->|❌ Denied| ToolBlocked
-    
-    %% Output Validation
-    OutputValidation --> OutputGuards{🛡️ Output Validation}
-    OutputGuards -->|✅ Valid| FinalResponse[📤 Response to User]
-    OutputGuards -->|❌ Invalid| OutputBlocked[🚫 Output Blocked]
-    
-    %% Orchestration Patterns
-    subgraph Orchestration [🎭 ORCHESTRATION PATTERNS]
-        direction LR
-        SingleAgent[🎯 Single Agent<br/>One agent handles all tasks]
-        MultiAgent[🤝 Multi-Agent<br/>Specialized agents collaborate]
-        
-        subgraph MultiPatterns [Multi-Agent Patterns]
-            Manager[👑 Manager Pattern<br/>Central coordinator]
-            Handoff[🔄 Handoff Pattern<br/>Peer-to-peer delegation]
-        end
-        
-        SingleAgent -.-> MultiAgent
-        MultiAgent --> MultiPatterns
-    end
-    
-    %% External Systems
-    subgraph External [🌐 EXTERNAL SYSTEMS]
-        direction TB
-        APIs[🔌 External APIs]
-        Databases[🗄️ Databases]
-        WebServices[🌍 Web Services]
-        LegacySystems[🏢 Legacy Systems]
-    end
-    
-    %% Connections to external systems
-    Tools -.-> External
-    
-    %% Human Intervention
-    HumanOversight[👥 Human Oversight<br/>Monitor & Intervene]
-    HumanOversight -.-> AgentCore
-    HumanOversight -.-> ToolGuards
-    HumanOversight -.-> OutputGuards
-    
-    %% Error Handling
-    Evaluation -->|Error| ErrorHandler{❗ Error Handler}
-    ErrorHandler -->|Retry| Reasoning
-    ErrorHandler -->|Escalate| HumanOversight
-    ErrorHandler -->|Fatal| ErrorResponse[💥 Error Response]
-    
-    %% Feedback Loop
-    FinalResponse -.-> Feedback[📊 Performance Monitoring]
-    Feedback -.-> Model
+    %% External systems
+    Data -.-> Systems[(🗄️ External Systems)]
+    Actions -.-> Systems
     
     %% Styling
-    classDef userClass fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    classDef safetyClass fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
-    classDef dangerClass fill:#ffebee,stroke:#c62828,stroke-width:2px
-    classDef coreClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
-    classDef toolClass fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
-    classDef externalClass fill:#f5f5f5,stroke:#616161,stroke-width:2px
+    classDef userClass fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef agentClass fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    classDef toolClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef safetyClass fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef systemClass fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
     
-    class User,FinalResponse userClass
-    class InputGuards,ToolGuards,OutputGuards,SafeExecution safetyClass
-    class BlockedResponse,ToolBlocked,OutputBlocked,ErrorResponse dangerClass
-    class Model,Instructions,Reasoning,Evaluation coreClass
-    class Tools,ToolSelection,Execution toolClass
-    class External,APIs,Databases,WebServices,LegacySystems externalClass
+    class User userClass
+    class Agent,Response agentClass
+    class Tools,Data,Actions toolClass
+    class Safety safetyClass
+    class Systems systemClass

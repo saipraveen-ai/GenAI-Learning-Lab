@@ -2,23 +2,54 @@
 
 This directory contains visual representations of key concepts from the OpenAI Agent Building Guide, implemented as Mermaid diagrams with generated SVG files.
 
-## 📋 Available Diagrams
+## � Visual Diagrams
 
-### 🏗️ Core Architecture
-- **[agent-architecture.mmd](agent-architecture.mmd)** / **[SVG](agent-architecture.svg)**  
-  *Complete agent architecture showing components, safety layers, and orchestration patterns*
+This directory contains comprehensive visual diagrams that illustrate key concepts from the OpenAI Agent Building Guide. The diagrams are organized into simple overview diagrams and detailed exploration diagrams to provide both quick understanding and deep insights.
 
-### 🤝 Orchestration Patterns  
-- **[orchestration-patterns.mmd](orchestration-patterns.mmd)** / **[SVG](orchestration-patterns.svg)**  
-  *Manager Pattern vs Handoff Pattern for multi-agent coordination*
+### 🎯 Core Overview Diagrams (Simple & Clear)
 
-### 🛡️ Safety & Security
-- **[safety-guardrails.mmd](safety-guardrails.mmd)** / **[SVG](safety-guardrails.svg)**  
-  *Comprehensive 3-tier safety validation and risk management system*
+#### 1. **Agent Architecture** (`agent-architecture.mmd/.svg`)
+**Purpose**: Simple overview of how agents work  
+**Shows**: User → Agent → Tools → Guardrails → Response  
+**Best for**: Quick understanding, presentations, introductions
 
-### 🎯 Decision Framework
-- **[workflow-decision-tree.mmd](workflow-decision-tree.mmd)** / **[SVG](workflow-decision-tree.svg)**  
-  *When to build agents vs traditional automation - complete decision tree*
+#### 2. **Safety Guardrails** (`safety-guardrails.mmd/.svg`)
+**Purpose**: Basic safety validation flow  
+**Shows**: Input check → Tool safety → Output validation  
+**Best for**: Safety overview, risk discussions
+
+#### 3. **Decision Tree** (`workflow-decision-tree.mmd/.svg`)
+**Purpose**: When to use which automation approach  
+**Shows**: 4-step decision process for automation choice  
+**Best for**: Project planning, architecture decisions
+
+### 🔍 Detailed Exploration Diagrams
+
+#### 4. **Agent Orchestration Patterns** (`agent-orchestration-patterns.mmd/.svg`)
+**Purpose**: Deep dive into multi-agent architectures  
+**Shows**: Single Agent vs Manager Pattern vs Handoff Pattern  
+**Best for**: Architecture planning, system design
+
+#### 5. **Detailed Safety System** (`detailed-safety-system.mmd/.svg`)
+**Purpose**: Comprehensive safety implementation  
+**Shows**: 3-tier safety validation with risk levels and human oversight  
+**Best for**: Security planning, compliance discussions
+
+#### 6. **Implementation Examples** (`implementation-examples.mmd/.svg`)
+**Purpose**: Real-world examples and risk assessment  
+**Shows**: Concrete examples, risk indicators, readiness checklist  
+**Best for**: Project evaluation, stakeholder discussions
+
+### 🚀 Quick Reference
+
+| Diagram | Complexity | Use Case | Target Audience |
+|---------|------------|----------|-----------------|
+| Agent Architecture | ⭐ Simple | Overview & Introduction | All stakeholders |
+| Safety Guardrails | ⭐ Simple | Safety basics | Security teams |
+| Decision Tree | ⭐ Simple | Choosing approach | Product managers |
+| Orchestration Patterns | ⭐⭐ Detailed | System architecture | Engineers |
+| Detailed Safety | ⭐⭐ Detailed | Security implementation | Security architects |
+| Implementation Examples | ⭐⭐ Detailed | Project planning | Project teams |
 
 ## 🎨 Usage in Documentation
 
@@ -26,9 +57,11 @@ All diagrams are referenced as SVG files in the documentation:
 
 ```markdown
 ![Agent Architecture](diagrams/agent-architecture.svg)
-![Orchestration Patterns](diagrams/orchestration-patterns.svg)
 ![Safety Guardrails](diagrams/safety-guardrails.svg)
 ![Decision Tree](diagrams/workflow-decision-tree.svg)
+![Agent Orchestration Patterns](diagrams/agent-orchestration-patterns.svg)
+![Detailed Safety System](diagrams/detailed-safety-system.svg)
+![Implementation Examples](diagrams/implementation-examples.svg)
 ```
 
 ## 🔧 Regenerating SVGs
@@ -38,9 +71,11 @@ To regenerate all SVG files from Mermaid sources:
 ```bash
 cd diagrams/
 mmdc -i agent-architecture.mmd -o agent-architecture.svg
-mmdc -i orchestration-patterns.mmd -o orchestration-patterns.svg  
 mmdc -i safety-guardrails.mmd -o safety-guardrails.svg
 mmdc -i workflow-decision-tree.mmd -o workflow-decision-tree.svg
+mmdc -i agent-orchestration-patterns.mmd -o agent-orchestration-patterns.svg
+mmdc -i detailed-safety-system.mmd -o detailed-safety-system.svg
+mmdc -i implementation-examples.mmd -o implementation-examples.svg
 ```
 
 ## 📐 Diagram Design Principles

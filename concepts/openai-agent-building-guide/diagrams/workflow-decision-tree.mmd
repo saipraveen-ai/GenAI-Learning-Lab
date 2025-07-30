@@ -1,138 +1,28 @@
 ---
-title: Agent vs Traditional Automation Decision Tree
-description: When to build agents vs conventional automation systems
+title: "Simple Automation Decision Tree"
 ---
 flowchart TD
-    Start([🎯 Automation Need Identified]) --> Question1{❓ Is the workflow<br/>well-defined and<br/>deterministic?}
+    Start([🎯 Need Automation?]) --> Q1{🤔 Is the process<br/>well-defined?}
     
-    Question1 -->|✅ Yes| Question2{❓ Does it require<br/>dynamic decision<br/>making?}
-    Question1 -->|❌ No| Question3{❓ Can you define<br/>success criteria<br/>clearly?}
+    Q1 -->|❌ No| Manual[📝 Keep Manual<br/>Define process first]
+    Q1 -->|✅ Yes| Q2{🗣️ Need language<br/>understanding?}
     
-    Question2 -->|❌ No| TraditionalAutomation[⚙️ Traditional Automation<br/>• RPA • Scripts • APIs<br/>• Rule engines]
-    Question2 -->|✅ Yes| Question4{❓ Is human oversight<br/>acceptable for<br/>edge cases?}
+    Q2 -->|❌ No| Traditional[⚙️ Traditional Automation<br/>Scripts, RPA, APIs]
+    Q2 -->|✅ Yes| Q3{🔄 Multiple<br/>complex steps?}
     
-    Question3 -->|❌ No| NotSuitable[🚫 Not Suitable for<br/>Automation Yet<br/>• Refine requirements<br/>• Manual process first]
-    Question3 -->|✅ Yes| Question5{❓ Does it involve<br/>natural language<br/>understanding?}
+    Q3 -->|❌ No| LLM[💬 Chatbot/LLM<br/>Simple Q&A, content]
+    Q3 -->|✅ Yes| Q4{🤝 Need coordination<br/>between tools?}
     
-    Question4 -->|❌ No| TraditionalAutomation
-    Question4 -->|✅ Yes| Question6{❓ Are there multiple<br/>interdependent<br/>steps?}
-    
-    Question5 -->|❌ No| TraditionalAutomation  
-    Question5 -->|✅ Yes| Question7{❓ Can you tolerate<br/>some variability<br/>in outcomes?}
-    
-    Question6 -->|❌ No| SimpleChatbot[💬 Simple Chatbot/LLM<br/>• Single-turn responses<br/>• Q&A systems<br/>• Content generation]
-    Question6 -->|✅ Yes| Question8{❓ Do you need<br/>integration with<br/>external systems?}
-    
-    Question7 -->|❌ No| TraditionalAutomation
-    Question7 -->|✅ Yes| Question9{❓ Is the task<br/>mission-critical?}
-    
-    Question8 -->|❌ No| SimpleChatbot
-    Question8 -->|✅ Yes| Question10{❓ Multiple users<br/>or concurrent<br/>workflows?}
-    
-    Question9 -->|✅ Yes| Question11{❓ Can you implement<br/>comprehensive<br/>guardrails?}
-    Question9 -->|❌ No| SingleAgent[🤖 Single Agent<br/>• Workflow automation<br/>• Tool integration<br/>• Decision making]
-    
-    Question10 -->|❌ No| SingleAgent
-    Question10 -->|✅ Yes| Question12{❓ Need specialized<br/>expertise per<br/>workflow step?}
-    
-    Question11 -->|❌ No| HybridApproach[🤝 Hybrid Approach<br/>• Human-in-the-loop<br/>• Agent assistance<br/>• Approval workflows]
-    Question11 -->|✅ Yes| SingleAgent
-    
-    Question12 -->|❌ No| Question13{❓ Need centralized<br/>coordination and<br/>quality control?}
-    Question12 -->|✅ Yes| Question14{❓ Sequential workflow<br/>or parallel<br/>processing?}
-    
-    Question13 -->|✅ Yes| ManagerPattern[👑 Manager Pattern<br/>Multi-Agent<br/>• Central coordinator<br/>• Quality assurance<br/>• Resource management]
-    Question13 -->|❌ No| SingleAgent
-    
-    Question14 -->|Sequential| HandoffPattern[🔄 Handoff Pattern<br/>Multi-Agent<br/>• Peer-to-peer<br/>• Specialized agents<br/>• Flexible routing]
-    Question14 -->|Parallel| ManagerPattern
-    
-    %% Example Classifications
-    subgraph Examples [📋 REAL-WORLD EXAMPLES]
-        direction TB
-        
-        subgraph TraditionalEx [⚙️ Traditional Examples]
-            T1[• Data backup scripts]
-            T2[• Invoice processing]
-            T3[• ETL pipelines]
-            T4[• System monitoring]
-        end
-        
-        subgraph ChatbotEx [💬 Chatbot Examples]
-            C1[• FAQ responses]
-            C2[• Content generation]
-            C3[• Simple Q&A]
-            C4[• Document summarization]
-        end
-        
-        subgraph SingleAgentEx [🤖 Single Agent Examples]
-            S1[• Customer service tickets]
-            S2[• Research compilation]
-            S3[• Report generation]
-            S4[• Basic fraud detection]
-        end
-        
-        subgraph MultiAgentEx [🤝 Multi-Agent Examples]
-            M1[• Complex customer journeys]
-            M2[• Multi-step analysis workflows]
-            M3[• Enterprise content creation]
-            M4[• Advanced fraud investigation]
-        end
-    end
-    
-    %% Risk Assessment
-    subgraph RiskFactors [⚠️ RISK ASSESSMENT]
-        direction TB
-        
-        subgraph LowRisk [🟢 Low Risk Indicators]
-            LR1[✅ Well-defined workflows]
-            LR2[✅ Clear success metrics]
-            LR3[✅ Reversible actions]
-            LR4[✅ Non-critical outcomes]
-        end
-        
-        subgraph HighRisk [🔴 High Risk Indicators]
-            HR1[❌ Ambiguous requirements]
-            HR2[❌ Financial transactions]
-            HR3[❌ Irreversible actions]
-            HR4[❌ Regulatory compliance needs]
-        end
-    end
-    
-    %% Implementation Readiness
-    subgraph Readiness [📊 IMPLEMENTATION READINESS]
-        direction TB
-        
-        subgraph ReadyIndicators [✅ Ready to Build]
-            R1[🎯 Clear use case definition]
-            R2[📊 Success metrics defined]
-            R3[🛡️ Guardrails planned]
-            R4[👥 Stakeholder buy-in]
-            R5[🔧 Technical infrastructure]
-        end
-        
-        subgraph NotReady [❌ Need More Preparation]
-            NR1[❓ Unclear requirements]
-            NR2[🚫 No success metrics]
-            NR3[⚠️ Insufficient safety planning]
-            NR4[👎 Limited stakeholder support]
-            NR5[🔧 Missing infrastructure]
-        end
-    end
+    Q4 -->|❌ No| SingleAgent[🤖 Single Agent<br/>Sequential tasks]
+    Q4 -->|✅ Yes| MultiAgent[🤝 Multi-Agent<br/>Complex orchestration]
     
     %% Styling
-    classDef questionClass fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
-    classDef traditionalClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
-    classDef chatbotClass fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
-    classDef agentClass fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
-    classDef multiAgentClass fill:#fce4ec,stroke:#c2185b,stroke-width:2px
-    classDef notSuitableClass fill:#ffebee,stroke:#c62828,stroke-width:2px
-    classDef exampleClass fill:#f5f5f5,stroke:#616161,stroke-width:2px
+    classDef startClass fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef questionClass fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    classDef solutionClass fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    classDef manualClass fill:#ffebee,stroke:#c62828,stroke-width:2px
     
-    class Start,Question1,Question2,Question3,Question4,Question5,Question6,Question7,Question8,Question9,Question10,Question11,Question12,Question13,Question14 questionClass
-    class TraditionalAutomation traditionalClass
-    class SimpleChatbot chatbotClass
-    class SingleAgent,HybridApproach agentClass
-    class ManagerPattern,HandoffPattern multiAgentClass
-    class NotSuitable notSuitableClass
-    class Examples,TraditionalEx,ChatbotEx,SingleAgentEx,MultiAgentEx,RiskFactors,LowRisk,HighRisk,Readiness,ReadyIndicators,NotReady exampleClass
+    class Start startClass
+    class Q1,Q2,Q3,Q4 questionClass
+    class Traditional,LLM,SingleAgent,MultiAgent solutionClass
+    class Manual manualClass

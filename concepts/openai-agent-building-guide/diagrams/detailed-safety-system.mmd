@@ -1,0 +1,56 @@
+---
+title: "Detailed Safety System"
+---
+flowchart TD
+    %% Input Layer
+    Input[👤 User Input] --> InputLayer[🛡️ Input Validation Layer]
+    
+    %% Input validation details
+    InputLayer --> Relevance{📋 Relevance?}
+    InputLayer --> Safety{🔒 Safety?}
+    InputLayer --> PII{🆔 PII Check?}
+    
+    Relevance -->|❌| Block1[🚫 Irrelevant]
+    Safety -->|❌| Block2[🚫 Unsafe]
+    PII -->|❌| Block3[🚫 PII Risk]
+    
+    Relevance -->|✅| Approved1[✅]
+    Safety -->|✅| Approved1
+    PII -->|✅| Approved1
+    
+    %% Processing Layer
+    Approved1 --> Processing[🤖 Agent Processing]
+    Processing --> ToolLayer[🛠️ Tool Safety Layer]
+    
+    %% Tool safety details
+    ToolLayer --> RiskCheck{⚖️ Risk Level?}
+    RiskCheck -->|🟢 Low| AutoExecute[✅ Auto Execute]
+    RiskCheck -->|🟡 Medium| HumanReview[👥 Human Review]
+    RiskCheck -->|🔴 High| Block4[🚫 High Risk Block]
+    
+    HumanReview -->|✅ Approved| AutoExecute
+    HumanReview -->|❌ Denied| Block4
+    
+    %% Output Layer
+    AutoExecute --> OutputLayer[📤 Output Validation]
+    OutputLayer --> ContentCheck{📋 Content OK?}
+    ContentCheck -->|❌| Block5[🚫 Invalid Output]
+    ContentCheck -->|✅| FinalResponse[📋 Safe Response]
+    
+    %% Human Oversight
+    HumanOversight[👥 Human Oversight] -.-> Processing
+    HumanOversight -.-> ToolLayer
+    HumanOversight -.-> OutputLayer
+    
+    %% Styling
+    classDef inputClass fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef safetyClass fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    classDef blockClass fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef processClass fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    classDef humanClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    
+    class Input,FinalResponse inputClass
+    class InputLayer,ToolLayer,OutputLayer,Relevance,Safety,PII,RiskCheck,ContentCheck,AutoExecute safetyClass
+    class Block1,Block2,Block3,Block4,Block5 blockClass
+    class Processing,Approved1 processClass
+    class HumanReview,HumanOversight humanClass

@@ -1,0 +1,80 @@
+---
+title: "Implementation Examples & Risk Assessment"
+---
+flowchart TD
+    %% Main Decision Tree (simplified reference)
+    Start([🎯 Automation Need]) --> Decision{Decision Process}
+    Decision --> Traditional[⚙️ Traditional]
+    Decision --> Chatbot[💬 Chatbot/LLM]
+    Decision --> SingleAgent[🤖 Single Agent]
+    Decision --> MultiAgent[🤝 Multi-Agent]
+    
+    %% Examples for each category
+    Traditional --> TradExamples[📋 Traditional Examples<br/>• Data backup scripts<br/>• Invoice processing<br/>• ETL pipelines<br/>• System monitoring]
+    
+    Chatbot --> ChatExamples[📋 Chatbot Examples<br/>• FAQ responses<br/>• Content generation<br/>• Simple Q&A<br/>• Document summarization]
+    
+    SingleAgent --> SingleExamples[📋 Single Agent Examples<br/>• Customer service tickets<br/>• Research compilation<br/>• Report generation<br/>• Basic fraud detection]
+    
+    MultiAgent --> MultiExamples[📋 Multi-Agent Examples<br/>• Complex customer journeys<br/>• Multi-step analysis<br/>• Enterprise content creation<br/>• Advanced fraud investigation]
+    
+    %% Risk Assessment
+    subgraph RiskAssessment [⚠️ Risk Assessment Guide]
+        direction TB
+        
+        subgraph LowRisk [🟢 Low Risk Signals]
+            LR1[✅ Well-defined workflows]
+            LR2[✅ Clear success metrics]
+            LR3[✅ Reversible actions]
+            LR4[✅ Non-critical outcomes]
+        end
+        
+        subgraph HighRisk [🔴 High Risk Signals]
+            HR1[❌ Ambiguous requirements]
+            HR2[❌ Financial transactions]
+            HR3[❌ Irreversible actions]
+            HR4[❌ Regulatory compliance]
+        end
+    end
+    
+    %% Implementation Readiness
+    subgraph ReadinessCheck [📊 Readiness Checklist]
+        direction TB
+        
+        subgraph Ready [✅ Ready to Build]
+            R1[🎯 Clear use case]
+            R2[📊 Success metrics defined]
+            R3[🛡️ Guardrails planned]
+            R4[👥 Stakeholder buy-in]
+            R5[🔧 Technical infrastructure]
+        end
+        
+        subgraph NotReady [❌ Need Preparation]
+            NR1[❓ Unclear requirements]
+            NR2[🚫 No success metrics]
+            NR3[⚠️ Insufficient safety planning]
+            NR4[👎 Limited support]
+            NR5[🔧 Missing infrastructure]
+        end
+    end
+    
+    %% Connections
+    Decision -.-> RiskAssessment
+    Decision -.-> ReadinessCheck
+    
+    %% Styling
+    classDef decisionClass fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef solutionClass fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    classDef exampleClass fill:#f5f5f5,stroke:#616161,stroke-width:2px
+    classDef lowRiskClass fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    classDef highRiskClass fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef readyClass fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    classDef notReadyClass fill:#ffebee,stroke:#c62828,stroke-width:2px
+    
+    class Start,Decision decisionClass
+    class Traditional,Chatbot,SingleAgent,MultiAgent solutionClass
+    class TradExamples,ChatExamples,SingleExamples,MultiExamples exampleClass
+    class LowRisk,LR1,LR2,LR3,LR4 lowRiskClass
+    class HighRisk,HR1,HR2,HR3,HR4 highRiskClass
+    class Ready,R1,R2,R3,R4,R5 readyClass
+    class NotReady,NR1,NR2,NR3,NR4,NR5 notReadyClass

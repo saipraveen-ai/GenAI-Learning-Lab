@@ -1,0 +1,58 @@
+---
+title: "Agent Orchestration Patterns"
+---
+flowchart TD
+    %% Single Agent Pattern
+    subgraph Single [🎯 Single Agent Pattern]
+        direction TB
+        User1[👤 User] --> Agent1[🤖 Agent]
+        Agent1 --> Tool1[🛠️ Tool A]
+        Agent1 --> Tool2[🛠️ Tool B]
+        Agent1 --> Tool3[🛠️ Tool C]
+        Tool1 --> Response1[📤 Response]
+        Tool2 --> Response1
+        Tool3 --> Response1
+        Response1 --> User1
+    end
+    
+    %% Manager Pattern
+    subgraph Manager [👑 Manager Pattern]
+        direction TB
+        User2[👤 User] --> ManagerAgent[🎯 Manager Agent]
+        ManagerAgent --> SpecAgent1[🤖 Specialist A]
+        ManagerAgent --> SpecAgent2[🤖 Specialist B]
+        ManagerAgent --> SpecAgent3[🤖 Specialist C]
+        SpecAgent1 --> ManagerAgent
+        SpecAgent2 --> ManagerAgent
+        SpecAgent3 --> ManagerAgent
+        ManagerAgent --> Response2[📤 Coordinated Response]
+        Response2 --> User2
+    end
+    
+    %% Handoff Pattern
+    subgraph Handoff [🔄 Handoff Pattern]
+        direction TB
+        User3[👤 User] --> AgentA[🤖 Agent A]
+        AgentA -->|Hand off| AgentB[🤖 Agent B]
+        AgentB -->|Hand off| AgentC[🤖 Agent C]
+        AgentC --> Response3[📤 Final Response]
+        Response3 --> User3
+    end
+    
+    %% When to use each
+    Single --> UseCase1[✅ Single domain<br/>Multiple tools<br/>Simple workflows]
+    Manager --> UseCase2[✅ Multiple domains<br/>Need coordination<br/>Quality control]
+    Handoff --> UseCase3[✅ Sequential steps<br/>Specialized expertise<br/>Clear handoff points]
+    
+    %% Styling
+    classDef userClass fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef agentClass fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    classDef toolClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef responseClass fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    classDef useCaseClass fill:#f5f5f5,stroke:#616161,stroke-width:2px
+    
+    class User1,User2,User3 userClass
+    class Agent1,ManagerAgent,SpecAgent1,SpecAgent2,SpecAgent3,AgentA,AgentB,AgentC agentClass
+    class Tool1,Tool2,Tool3 toolClass
+    class Response1,Response2,Response3 responseClass
+    class UseCase1,UseCase2,UseCase3 useCaseClass

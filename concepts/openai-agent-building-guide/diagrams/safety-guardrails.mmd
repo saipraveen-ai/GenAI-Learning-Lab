@@ -1,136 +1,32 @@
 ---
-title: Agent Safety Guardrails System
-description: Comprehensive 3-tier safety validation and risk management
+title: "Simple Safety Guardrails"
 ---
-flowchart TB
-    %% User Input Phase
-    UserInput([👤 User Request]) --> InputAnalysis[🔍 Input Analysis]
+flowchart TD
+    %% Input validation
+    Input[👤 User Input] --> Check1{🔍 Is it safe?}
+    Check1 -->|❌ No| Block1[🚫 Blocked]
+    Check1 -->|✅ Yes| Process[🤖 Agent Processing]
     
-    %% Tier 1: Input Validation
-    subgraph Tier1 [🛡️ TIER 1: INPUT VALIDATION]
-        direction TB
-        InputAnalysis --> RelevanceCheck{📋 Relevance Check}
-        InputAnalysis --> SafetyFilter{🔒 Safety Filter}
-        InputAnalysis --> PIIDetection{🆔 PII Detection}
-        
-        RelevanceCheck -->|✅ Relevant| SafetyFilter
-        RelevanceCheck -->|❌ Irrelevant| IrrelevantBlock[🚫 Request Blocked: Irrelevant]
-        
-        SafetyFilter -->|✅ Safe Content| PIIDetection
-        SafetyFilter -->|❌ Unsafe Content| UnsafeBlock[🚫 Request Blocked: Unsafe]
-        
-        PIIDetection -->|✅ No PII Issues| InputApproved[✅ Input Approved]
-        PIIDetection -->|⚠️ PII Detected| PIIHandler{🔄 PII Handler}
-        
-        PIIHandler -->|Sanitized| InputApproved
-        PIIHandler -->|Cannot Sanitize| PIIBlock[🚫 Request Blocked: PII]
-    end
+    %% Tool safety
+    Process --> Check2{🛠️ Tool safe?}
+    Check2 -->|❌ No| Block2[🚫 Tool Blocked]
+    Check2 -->|⚠️ Risky| Human[👥 Human Review]
+    Check2 -->|✅ Yes| Execute[⚡ Execute Tool]
+    Human -->|✅ Approved| Execute
+    Human -->|❌ Denied| Block3[🚫 Denied]
     
-    %% Agent Processing
-    InputApproved --> AgentCore[🤖 Agent Core Processing]
-    
-    %% Tier 2: Tool Safety
-    subgraph Tier2 [🛠️ TIER 2: TOOL SAFETY]
-        direction TB
-        AgentCore --> ToolSelection[🔧 Tool Selection]
-        ToolSelection --> RiskAssessment{⚖️ Risk Assessment}
-        
-        RiskAssessment -->|🟢 Low Risk| LowRiskTools[✅ Auto-Execute Safe Tools]
-        RiskAssessment -->|🟡 Medium Risk| MediumRiskReview{👥 Human Review}
-        RiskAssessment -->|🔴 High Risk| HighRiskBlock[🚫 Tool Blocked]
-        
-        LowRiskTools --> ToolExecution[⚡ Tool Execution]
-        MediumRiskReview -->|✅ Approved| ToolExecution
-        MediumRiskReview -->|❌ Denied| ToolDenied[🚫 Tool Access Denied]
-        
-        %% Tool Risk Categories
-        subgraph RiskCategories [Risk Categories]
-            direction TB
-            LowRisk[🟢 Low Risk<br/>• Read operations<br/>• Data retrieval<br/>• Calculations]
-            MediumRisk[🟡 Medium Risk<br/>• API calls<br/>• Data modifications<br/>• External integrations]
-            HighRisk[🔴 High Risk<br/>• System commands<br/>• Data deletion<br/>• Financial transactions]
-        end
-    end
-    
-    %% Tool Results Processing
-    ToolExecution --> ResultProcessing[📊 Process Tool Results]
-    
-    %% Tier 3: Output Validation
-    subgraph Tier3 [📤 TIER 3: OUTPUT VALIDATION]
-        direction TB
-        ResultProcessing --> OutputAnalysis[🔍 Output Analysis]
-        
-        OutputAnalysis --> BrandAlignment{🎯 Brand Alignment}
-        OutputAnalysis --> ContentSafety{🔒 Content Safety}
-        OutputAnalysis --> QualityCheck{✅ Quality Check}
-        
-        BrandAlignment -->|✅ On Brand| ContentSafety
-        BrandAlignment -->|❌ Off Brand| BrandBlock[🚫 Output Blocked: Brand]
-        
-        ContentSafety -->|✅ Safe Content| QualityCheck
-        ContentSafety -->|❌ Unsafe Content| ContentBlock[🚫 Output Blocked: Safety]
-        
-        QualityCheck -->|✅ High Quality| OutputApproved[✅ Output Approved]
-        QualityCheck -->|❌ Low Quality| QualityBlock[🚫 Output Blocked: Quality]
-    end
-    
-    %% Final Response
-    OutputApproved --> FinalResponse[📬 Deliver Response to User]
-    
-    %% Human Oversight Layer
-    subgraph Oversight [👥 HUMAN OVERSIGHT]
-        direction TB
-        Monitor[📊 Continuous Monitoring]
-        Escalation[🚨 Escalation Triggers]
-        Intervention[🛠️ Manual Intervention]
-        
-        Monitor --> Escalation
-        Escalation --> Intervention
-    end
-    
-    %% Oversight Connections
-    Oversight -.-> Tier1
-    Oversight -.-> Tier2
-    Oversight -.-> Tier3
-    
-    %% Audit Trail
-    subgraph AuditTrail [📋 AUDIT TRAIL]
-        direction TB
-        LogInput[📝 Log Input Validation]
-        LogTools[📝 Log Tool Usage]
-        LogOutput[📝 Log Output Validation]
-        LogBlocks[📝 Log Blocked Actions]
-    end
-    
-    %% Logging Connections
-    Tier1 -.-> LogInput
-    Tier2 -.-> LogTools
-    Tier3 -.-> LogOutput
-    IrrelevantBlock -.-> LogBlocks
-    UnsafeBlock -.-> LogBlocks
-    PIIBlock -.-> LogBlocks
-    HighRiskBlock -.-> LogBlocks
-    ToolDenied -.-> LogBlocks
-    BrandBlock -.-> LogBlocks
-    ContentBlock -.-> LogBlocks
-    QualityBlock -.-> LogBlocks
-    
-    %% Emergency Override
-    EmergencyOverride[🆘 Emergency Override] -.-> AgentCore
-    EmergencyOverride -.-> ToolExecution
-    EmergencyOverride -.-> OutputApproved
+    %% Output validation
+    Execute --> Check3{📤 Output safe?}
+    Check3 -->|❌ No| Block3
+    Check3 -->|✅ Yes| Response[📨 Safe Response]
     
     %% Styling
-    classDef inputClass fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    classDef safetyClass fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
-    classDef warningClass fill:#fff3e0,stroke:#f57c00,stroke-width:2px
-    classDef dangerClass fill:#ffebee,stroke:#c62828,stroke-width:2px
-    classDef processClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
-    classDef oversightClass fill:#f5f5f5,stroke:#616161,stroke-width:2px
+    classDef inputClass fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef safeClass fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    classDef blockClass fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef processClass fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
     
-    class UserInput,InputAnalysis,FinalResponse inputClass
-    class InputApproved,LowRiskTools,ToolExecution,OutputApproved safetyClass
-    class PIIHandler,MediumRiskReview,RiskAssessment warningClass
-    class IrrelevantBlock,UnsafeBlock,PIIBlock,HighRiskBlock,ToolDenied,BrandBlock,ContentBlock,QualityBlock dangerClass
-    class AgentCore,ResultProcessing,OutputAnalysis processClass
-    class Oversight,Monitor,Escalation,Intervention,AuditTrail,LogInput,LogTools,LogOutput,LogBlocks,EmergencyOverride oversightClass
+    class Input,Response inputClass
+    class Check1,Check2,Check3,Execute safeClass
+    class Block1,Block2,Block3 blockClass
+    class Process,Human processClass
