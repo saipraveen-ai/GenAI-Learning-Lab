@@ -56,12 +56,12 @@ This directory contains comprehensive visual diagrams that illustrate key concep
 All diagrams are referenced as SVG files in the documentation:
 
 ```markdown
-![Agent Architecture](diagrams/agent-architecture.svg)
-![Safety Guardrails](diagrams/safety-guardrails.svg)
-![Decision Tree](diagrams/workflow-decision-tree.svg)
-![Agent Orchestration Patterns](diagrams/agent-orchestration-patterns.svg)
-![Detailed Safety System](diagrams/detailed-safety-system.svg)
-![Implementation Examples](diagrams/implementation-examples.svg)
+![Agent Architecture](agent-architecture.svg)
+![Safety Guardrails](safety-guardrails.svg)
+![Decision Tree](workflow-decision-tree.svg)
+![Agent Orchestration Patterns](agent-orchestration-patterns.svg)
+![Detailed Safety System](detailed-safety-system.svg)
+![Implementation Examples](implementation-examples.svg)
 ```
 
 ## 🔧 Regenerating SVGs
