@@ -87,9 +87,21 @@ python3 advanced_agentic_thermostat.py  # Advanced agentic AI
 ## 🎨 Visual Diagrams
 
 All visual diagrams are available in the **[diagrams/](diagrams/)** folder:
-- **Intelligence Spectrum**: Rule-Based → AI Agent → Agentic AI progression
-- **Agentic Architecture**: Goal understanding, planning, and execution cycle
-- **Agentic Flow**: Five-step process (Perceive → Reflect → Plan → Execute → Learn)
+
+### Intelligence Spectrum
+Rule-Based → AI Agent → Agentic AI progression
+
+![Intelligence Spectrum](diagrams/intelligence-spectrum.svg)
+
+### Agentic Architecture  
+Goal understanding, planning, and execution cycle
+
+![Agentic AI Architecture](diagrams/agentic-ai-architecture.svg)
+
+### Agentic Flow
+Five-step process (Perceive → Reflect → Plan → Execute → Learn)
+
+![Agentic Cycle Flow](diagrams/agentic-cycle-flow.svg)
 
 ## 💡 Key Insight
 

@@ -4,15 +4,26 @@ This folder contains externalized Mermaid diagrams for the Agentic AI vs AI Agen
 
 ## Diagram Files
 
-### Mermaid Source Files
-1. **[intelligence-spectrum.mmd](intelligence-spectrum.mmd)** - Shows the progression from Rule-Based Systems → AI Agents → Agentic AI
-2. **[agentic-ai-architecture.mmd](agentic-ai-architecture.mmd)** - Detailed architecture of an Agentic AI thermostat system
-3. **[agentic-cycle-flow.mmd](agentic-cycle-flow.mmd)** - The five-step agentic cycle: Perceive → Reflect → Plan → Execute → Learn
+### 1. Intelligence Spectrum
+**Source**: [intelligence-spectrum.mmd](intelligence-spectrum.mmd) | **Rendered**: [intelligence-spectrum.svg](intelligence-spectrum.svg)
 
-### SVG Rendered Files
-1. **[intelligence-spectrum.svg](intelligence-spectrum.svg)** - Intelligence spectrum visualization (ready to display)
-2. **[agentic-ai-architecture.svg](agentic-ai-architecture.svg)** - Agentic AI architecture (ready to display)
-3. **[agentic-cycle-flow.svg](agentic-cycle-flow.svg)** - Agentic cycle flow (ready to display)
+Shows the progression from Rule-Based Systems → AI Agents → Agentic AI
+
+![Intelligence Spectrum](intelligence-spectrum.svg)
+
+### 2. Agentic AI Architecture  
+**Source**: [agentic-ai-architecture.mmd](agentic-ai-architecture.mmd) | **Rendered**: [agentic-ai-architecture.svg](agentic-ai-architecture.svg)
+
+Detailed architecture of an Agentic AI thermostat system
+
+![Agentic AI Architecture](agentic-ai-architecture.svg)
+
+### 3. Agentic Cycle Flow
+**Source**: [agentic-cycle-flow.mmd](agentic-cycle-flow.mmd) | **Rendered**: [agentic-cycle-flow.svg](agentic-cycle-flow.svg)
+
+The five-step agentic cycle: Perceive → Reflect → Plan → Execute → Learn
+
+![Agentic Cycle Flow](agentic-cycle-flow.svg)
 
 ## How to View
 
