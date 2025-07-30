@@ -13,15 +13,21 @@ This directory contains comprehensive visual diagrams that illustrate key concep
 **Shows**: User → Agent → Tools → Guardrails → Response  
 **Best for**: Quick understanding, presentations, introductions
 
+![Agent Architecture](agent-architecture.svg)
+
 #### 2. **Safety Guardrails** (`safety-guardrails.mmd/.svg`)
 **Purpose**: Basic safety validation flow  
 **Shows**: Input check → Tool safety → Output validation  
 **Best for**: Safety overview, risk discussions
 
+![Safety Guardrails](safety-guardrails.svg)
+
 #### 3. **Decision Tree** (`workflow-decision-tree.mmd/.svg`)
 **Purpose**: When to use which automation approach  
 **Shows**: 4-step decision process for automation choice  
 **Best for**: Project planning, architecture decisions
+
+![Decision Tree](workflow-decision-tree.svg)
 
 ### 🔍 Detailed Exploration Diagrams
 
@@ -30,15 +36,21 @@ This directory contains comprehensive visual diagrams that illustrate key concep
 **Shows**: Single Agent vs Manager Pattern vs Handoff Pattern  
 **Best for**: Architecture planning, system design
 
+![Agent Orchestration Patterns](agent-orchestration-patterns.svg)
+
 #### 5. **Detailed Safety System** (`detailed-safety-system.mmd/.svg`)
 **Purpose**: Comprehensive safety implementation  
 **Shows**: 3-tier safety validation with risk levels and human oversight  
 **Best for**: Security planning, compliance discussions
 
+![Detailed Safety System](detailed-safety-system.svg)
+
 #### 6. **Implementation Examples** (`implementation-examples.mmd/.svg`)
 **Purpose**: Real-world examples and risk assessment  
 **Shows**: Concrete examples, risk indicators, readiness checklist  
 **Best for**: Project evaluation, stakeholder discussions
+
+![Implementation Examples](implementation-examples.svg)
 
 ### 🚀 Quick Reference
 
