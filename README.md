@@ -46,12 +46,6 @@ GenAI-Learning-Lab/
 ## 🌐 Publishing Platforms
 
 - **GitHub**: Primary repository and version control
-- **GitHub Pages**: Static site generation
-- **GitBook**: Professional documentation platform
-- **Notion**: Collaborative knowledge base
-- **Medium**: Blog posts and tutorials
-- **Dev.to**: Developer community articles
-- **Personal Blog**: Long-form content
 
 ## 🛠️ Tools & Technologies
 
