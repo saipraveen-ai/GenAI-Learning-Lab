@@ -1,0 +1,50 @@
+---
+title: OpenAI Agent Architecture
+description: Core components and interactions in agent systems
+---
+architecture-beta
+    group agent_core(cloud)[AGENT CORE]
+    group safety_layer(internet)[SAFETY LAYER]
+    group orchestration(server)[ORCHESTRATION]
+    group external_systems(database)[EXTERNAL SYSTEMS]
+    
+    service model(server)[LLM Model] in agent_core
+    service tools(disk)[Tool Registry] in agent_core
+    service instructions(disk)[Instructions] in agent_core
+    
+    service input_guards(internet)[Input Validation] in safety_layer
+    service tool_guards(internet)[Tool Safety] in safety_layer
+    service output_guards(internet)[Output Validation] in safety_layer
+    service human_intervention(server)[Human Oversight] in safety_layer
+    
+    service single_agent(server)[Single Agent] in orchestration
+    service multi_agent(cloud)[MultiAgent] in orchestration
+    service manager_pattern(server)[Manager Pattern] in orchestration
+    service handoff_pattern(server)[Handoff Pattern] in orchestration
+    
+    service apis(database)[External APIs] in external_systems
+    service databases(database)[Databases] in external_systems
+    service web_services(internet)[Web Services] in external_systems
+    
+    junction workflow_center
+    junction safety_center
+    
+    model:R -- L:workflow_center
+    tools:R -- L:workflow_center
+    instructions:R -- L:workflow_center
+    
+    workflow_center:T -- B:safety_center
+    
+    input_guards:B -- T:safety_center
+    tool_guards:L -- R:safety_center
+    output_guards:R -- L:safety_center
+    human_intervention:T -- B:safety_center
+    
+    safety_center:R -- L:single_agent
+    single_agent:B -- T:multi_agent
+    multi_agent:L -- R:manager_pattern
+    manager_pattern:B -- T:handoff_pattern
+    
+    tools:B -- T:apis
+    tools:B -- T:databases  
+    tools:B -- T:web_services

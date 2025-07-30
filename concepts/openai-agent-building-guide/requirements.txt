@@ -1,0 +1,52 @@
+# OpenAI Agent Building Guide - Requirements
+# Core dependencies for agent development and demonstrations
+
+# OpenAI and Agent SDK
+openai>=1.35.0
+agents-sdk>=0.1.0
+
+# Core Python packages
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+typing-extensions>=4.5.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Web and API integration
+requests>=2.31.0
+httpx>=0.25.0
+
+# Async support
+asyncio-throttle>=1.0.2
+aiohttp>=3.8.0
+
+# Development and testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Documentation
+markdown>=3.5.0
+mkdocs>=1.5.0
+
+# Security and compliance
+cryptography>=41.0.0
+python-jose>=3.3.0
+
+# Monitoring and logging
+structlog>=23.1.0
+prometheus-client>=0.17.0
+
+# PDF processing (for content extraction)
+PyPDF2>=3.0.1
+
+# Environment and configuration
+python-decouple>=3.8
+
+# Optional: For advanced features
+# langchain>=0.1.0
+# chromadb>=0.4.0
+# faiss-cpu>=1.7.0
