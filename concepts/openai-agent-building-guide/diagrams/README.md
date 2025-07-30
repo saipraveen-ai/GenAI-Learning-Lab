@@ -1,64 +1,70 @@
-# Diagrams for OpenAI Agent Building Guide
+# OpenAI Agent Building Guide - Diagrams
 
-This directory contains architectural diagrams and visualizations for the OpenAI Agent Building Guide concepts.
+This directory contains visual representations of key concepts from the OpenAI Agent Building Guide, implemented as Mermaid diagrams with generated SVG files.
 
-## Available Diagrams
+## 📋 Available Diagrams
 
-### 1. Agent Architecture (`agent-architecture.mmd`)
-- Core components: Model, Tools, Instructions
-- Component interactions and relationships
-- Data flow visualization
+### 🏗️ Core Architecture
+- **[agent-architecture.mmd](agent-architecture.mmd)** / **[SVG](agent-architecture.svg)**  
+  *Complete agent architecture showing components, safety layers, and orchestration patterns*
 
-### 2. Orchestration Patterns (`orchestration-patterns.mmd`)
-- Single-agent vs multi-agent systems
-- Manager pattern architecture
-- Decentralized handoff pattern
+### 🤝 Orchestration Patterns  
+- **[orchestration-patterns.mmd](orchestration-patterns.mmd)** / **[SVG](orchestration-patterns.svg)**  
+  *Manager Pattern vs Handoff Pattern for multi-agent coordination*
 
-### 3. Guardrails Framework (`guardrails-framework.mmd`)
-- Safety layers and protection mechanisms
-- Input validation flow
-- Risk assessment workflow
+### 🛡️ Safety & Security
+- **[safety-guardrails.mmd](safety-guardrails.mmd)** / **[SVG](safety-guardrails.svg)**  
+  *Comprehensive 3-tier safety validation and risk management system*
 
-### 4. Production Deployment (`production-architecture.mmd`)
-- Enterprise deployment architecture
-- Monitoring and observability
-- Scaling and redundancy patterns
+### 🎯 Decision Framework
+- **[workflow-decision-tree.mmd](workflow-decision-tree.mmd)** / **[SVG](workflow-decision-tree.svg)**  
+  *When to build agents vs traditional automation - complete decision tree*
 
-## Viewing Diagrams
+## 🎨 Usage in Documentation
 
-### VS Code with Mermaid Extension
-1. Install "Mermaid Preview" extension
-2. Open `.mmd` files and use preview mode
-3. Live editing with real-time preview
+All diagrams are referenced as SVG files in the documentation:
 
-### Online Mermaid Editor
-1. Copy diagram code from `.mmd` files
-2. Paste into [Mermaid Live Editor](https://mermaid.live/)
-3. View and export diagrams
-
-### Command Line
-```bash
-# Install mermaid-cli
-npm install -g @mermaid-js/mermaid-cli
-
-# Generate SVG from mermaid
-mmdc -i diagram.mmd -o diagram.svg
+```markdown
+![Agent Architecture](diagrams/agent-architecture.svg)
+![Orchestration Patterns](diagrams/orchestration-patterns.svg)
+![Safety Guardrails](diagrams/safety-guardrails.svg)
+![Decision Tree](diagrams/workflow-decision-tree.svg)
 ```
 
-## Diagram Standards
+## 🔧 Regenerating SVGs
 
-All diagrams follow these conventions:
-- **Blue**: Core agent components
-- **Green**: Safe/approved paths
-- **Red**: Blocked/dangerous paths  
-- **Yellow**: Warning/attention areas
-- **Gray**: External systems/infrastructure
+To regenerate all SVG files from Mermaid sources:
 
-## Contributing
+```bash
+cd diagrams/
+mmdc -i agent-architecture.mmd -o agent-architecture.svg
+mmdc -i orchestration-patterns.mmd -o orchestration-patterns.svg  
+mmdc -i safety-guardrails.mmd -o safety-guardrails.svg
+mmdc -i workflow-decision-tree.mmd -o workflow-decision-tree.svg
+```
 
-When adding new diagrams:
-1. Use descriptive filenames
-2. Include YAML frontmatter for metadata
-3. Follow the color conventions
-4. Add description to this README
-5. Test rendering in multiple viewers
+## 📐 Diagram Design Principles
+
+### Visual Hierarchy
+- **🔵 Blue**: User interaction points
+- **🟢 Green**: Safe operations and validation
+- **🟡 Orange**: Tool operations and medium risk
+- **🔴 Red**: Blocked operations and high risk
+- **🟣 Purple**: Core agent logic and coordination
+- **⚫ Gray**: External systems and infrastructure
+
+### Flow Patterns
+- **Solid arrows**: Primary workflow paths
+- **Dotted arrows**: Monitoring and feedback loops
+- **Labeled edges**: Decision criteria and conditions
+- **Subgraphs**: Logical component groupings
+
+### Content Strategy
+- **Emojis**: Instant visual recognition
+- **Multi-line labels**: Detailed context without clutter
+- **Decision diamonds**: Clear branching logic
+- **Color coding**: Consistent risk and component classification
+
+---
+
+*Generated from the OpenAI Agent Building Guide concept. Each diagram supports both educational understanding and practical implementation reference.*

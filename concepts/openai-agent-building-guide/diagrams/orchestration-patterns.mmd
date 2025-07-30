@@ -1,0 +1,111 @@
+---
+title: Multi-Agent Orchestration Patterns
+description: Manager Pattern vs Handoff Pattern for multi-agent coordination
+---
+flowchart TB
+    subgraph SingleAgent [🎯 SINGLE AGENT PATTERN]
+        direction TB
+        User1([👤 User Request]) --> SA[🤖 Single Agent]
+        SA --> Tools1[🛠️ All Tools & Context]
+        Tools1 --> Response1[📤 Complete Response]
+    end
+    
+    subgraph ManagerPattern [👑 MANAGER PATTERN]
+        direction TB
+        User2([👤 Complex Request]) --> Manager[🤖 Manager Agent]
+        
+        Manager --> Planning{🧠 Task Planning}
+        Planning --> TaskBreakdown[📋 Break into Subtasks]
+        
+        TaskBreakdown --> Assignment{📨 Agent Assignment}
+        Assignment --> Research[🔍 Research Agent]
+        Assignment --> Analysis[📊 Analysis Agent] 
+        Assignment --> Content[✍️ Content Agent]
+        
+        Research --> ResearchResult[📄 Research Data]
+        Analysis --> AnalysisResult[📈 Analysis Report]
+        Content --> ContentResult[📝 Content Draft]
+        
+        ResearchResult --> Coordination[🎭 Manager Coordination]
+        AnalysisResult --> Coordination
+        ContentResult --> Coordination
+        
+        Coordination --> QualityCheck{✅ Quality Review}
+        QualityCheck -->|✅ Approved| FinalResponse2[📤 Integrated Response]
+        QualityCheck -->|❌ Revise| Assignment
+    end
+    
+    subgraph HandoffPattern [🔄 HANDOFF PATTERN]
+        direction TB
+        User3([👤 Multi-Step Request]) --> FirstAgent[🤖 Agent 1: Intake]
+        
+        FirstAgent --> Decision1{🤔 Next Step?}
+        Decision1 -->|Research Needed| Agent2[🔍 Agent 2: Research]
+        Decision1 -->|Analysis Needed| Agent3[📊 Agent 3: Analysis]
+        Decision1 -->|Complete| DirectResponse[📤 Direct Response]
+        
+        Agent2 --> Research2[📄 Research Complete]
+        Research2 --> Handoff1[🤝 Handoff to Analysis]
+        Handoff1 --> Agent3
+        
+        Agent3 --> Analysis2[📈 Analysis Complete]
+        Analysis2 --> Decision2{🤔 Next Step?}
+        Decision2 -->|Content Creation| Agent4[✍️ Agent 4: Content]
+        Decision2 -->|Complete| AnalysisResponse[📤 Analysis Response]
+        
+        Agent4 --> Content2[📝 Content Complete]
+        Content2 --> FinalResponse3[📤 Final Response]
+    end
+    
+    %% Pattern Comparison
+    subgraph Comparison [⚖️ PATTERN COMPARISON]
+        direction LR
+        
+        subgraph ManagerPros [👑 Manager Pattern]
+            MP1[✅ Centralized Control]
+            MP2[✅ Quality Assurance]
+            MP3[✅ Resource Optimization]
+            MP4[✅ Consistent Output]
+        end
+        
+        subgraph HandoffPros [🔄 Handoff Pattern]
+            HP1[✅ Specialized Expertise]
+            HP2[✅ Flexible Routing]
+            HP3[✅ Reduced Bottlenecks]
+            HP4[✅ Natural Workflow]
+        end
+    end
+    
+    %% When to Use Each Pattern
+    subgraph Usage [🎯 WHEN TO USE]
+        direction TB
+        
+        subgraph ManagerUse [👑 Use Manager Pattern When:]
+            MU1[🎯 Complex coordination needed]
+            MU2[🔒 Strong quality control required]
+            MU3[📊 Resource management critical]
+            MU4[🎭 Multiple parallel tasks]
+        end
+        
+        subgraph HandoffUse [🔄 Use Handoff Pattern When:]
+            HU1[🔄 Sequential workflow natural]
+            HU2[🎯 High specialization needed]
+            HU3[⚡ Speed and autonomy preferred]
+            HU4[🌊 Variable path complexity]
+        end
+    end
+    
+    %% Styling
+    classDef userClass fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef managerClass fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef handoffClass fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    classDef agentClass fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    classDef resultClass fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    classDef comparisonClass fill:#f5f5f5,stroke:#616161,stroke-width:2px
+    
+    class User1,User2,User3 userClass
+    class Manager,Coordination,QualityCheck managerClass
+    class FirstAgent,Handoff1,Decision1,Decision2 handoffClass
+    class SA,Research,Analysis,Content,Agent2,Agent3,Agent4 agentClass
+    class Response1,FinalResponse2,FinalResponse3,ResearchResult,AnalysisResult,ContentResult resultClass
+    class Comparison,ManagerPros,HandoffPros,Usage,ManagerUse,HandoffUse comparisonClass

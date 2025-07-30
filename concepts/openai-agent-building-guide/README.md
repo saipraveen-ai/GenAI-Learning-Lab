@@ -37,8 +37,14 @@ pip install -r requirements.txt
 # Basic agent demo
 python demo/basic_agent_demo.py
 
-# Multi-agent orchestration
+# Multi-agent orchestration patterns
 python demo/orchestration_demo.py
+
+# Safety guardrails system
+python demo/safety_guardrails_demo.py
+
+# Decision framework (interactive)
+python demo/workflow_decision_demo.py
 
 # Guardrails in action
 python demo/guardrails_demo.py
@@ -56,28 +62,9 @@ python demo/guardrails_demo.py
 
 ## 🏗️ Agent Architecture Overview
 
-```
-┌─────────────────────────────────────────────┐
-│                    AGENT                    │
-├─────────────────────────────────────────────┤
-│  ┌─────────┐  ┌─────────┐  ┌─────────────┐  │
-│  │  MODEL  │  │  TOOLS  │  │ INSTRUCTIONS│  │
-│  │  (LLM)  │  │ (APIs)  │  │ (Guardrails)│  │
-│  └─────────┘  └─────────┘  └─────────────┘  │
-├─────────────────────────────────────────────┤
-│           ORCHESTRATION LAYER               │
-│  ┌─────────────┐  ┌─────────────────────┐   │
-│  │ Single-Agent│  │   Multi-Agent       │   │
-│  │   Systems   │  │   Systems           │   │
-│  └─────────────┘  └─────────────────────┘   │
-├─────────────────────────────────────────────┤
-│             SAFETY LAYER                    │
-│  ┌─────────┐ ┌─────────┐ ┌─────────────┐   │
-│  │Input    │ │Tool     │ │Human        │   │
-│  │Guards   │ │Safety   │ │Intervention │   │
-│  └─────────┘ └─────────┘ └─────────────┘   │
-└─────────────────────────────────────────────┘
-```
+![OpenAI Agent Architecture](diagrams/agent-architecture.svg)
+
+*Interactive architecture diagram showing the core components and layers of OpenAI agents*
 
 ## 📚 Learning Path
 
@@ -133,11 +120,39 @@ openai-agent-building-guide/
 ├── demo/                  # Live demonstration code
 │   ├── basic_agent_demo.py
 │   ├── orchestration_demo.py
-│   ├── guardrails_demo.py
-│   └── utilities/
+│   ├── safety_guardrails_demo.py
+│   ├── workflow_decision_demo.py
+│   ├── run_all_demos.py
+│   └── README.md
 ├── diagrams/             # Architecture visualizations
-└── extracted_content/    # Original PDF content
+│   ├── agent-architecture.mmd    # Core agent architecture
+│   ├── agent-architecture.svg    # Generated SVG
+│   ├── orchestration-patterns.mmd    # Multi-agent patterns
+│   ├── orchestration-patterns.svg    # Generated SVG  
+│   ├── safety-guardrails.mmd    # 3-tier safety system
+│   ├── safety-guardrails.svg    # Generated SVG
+│   ├── workflow-decision-tree.mmd    # Decision framework
+│   ├── workflow-decision-tree.svg    # Generated SVG
+│   └── README.md
+└── resources/            # Auxiliary files and scripts
+    ├── extraction/       # PDF content and source materials
+    │   ├── openai-agent-guide.pdf
+    │   ├── openai_agent_guide_content_full.txt
+    │   └── openai_agent_guide_content_structured.json
+    ├── scripts/          # Utility scripts
+    │   ├── extract_pdf.py
+    │   └── generate_svgs.sh
+    └── README.md
 ```
+
+### 🎨 Working with Diagrams
+
+Generate SVG files from Mermaid diagrams:
+```bash
+./resources/scripts/generate_svgs.sh
+```
+
+**Important**: Always reference SVG files in documentation, not Mermaid code blocks.
 
 ## 🎓 Success Metrics
 

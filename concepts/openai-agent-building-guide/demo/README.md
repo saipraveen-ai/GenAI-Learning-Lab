@@ -1,23 +1,56 @@
-# Demo Scripts for OpenAI Agent Building Guide
+# OpenAI Agent Building Guide - Demonstrations
 
-This directory contains working demonstrations of the concepts covered in the OpenAI Agent Building Guide.
+This directory contains practical demonstrations of agent concepts, patterns, and safety mechanisms from the OpenAI Agent Building Guide.
 
-## Available Demonstrations
+## 🎯 Available Demonstrations
 
-### 1. Basic Agent Demo (`basic_agent_demo.py`)
-- Single-agent weather system
-- Demonstrates core components: Model, Tools, Instructions
-- Shows dynamic tool selection and workflow execution
+### 🤖 Core Agent Concepts
+- **[basic_agent_demo.py](basic_agent_demo.py)**  
+  *Basic agent implementation with tool integration and decision making*
 
-### 2. Orchestration Demo (`orchestration_demo.py`)
-- Multi-agent translation service
-- Manager pattern implementation
-- Specialized agent coordination
+### 🤝 Multi-Agent Orchestration
+- **[orchestration_demo.py](orchestration_demo.py)**  
+  *Manager Pattern vs Handoff Pattern comparison with working examples*
 
-### 3. Guardrails Demo (`guardrails_demo.py`)
-- Comprehensive safety mechanisms
-- Input validation and filtering
-- Tool-level safety checks
+### 🛡️ Safety & Guardrails
+- **[safety_guardrails_demo.py](safety_guardrails_demo.py)**  
+  *Comprehensive 3-tier safety validation system demonstration*
+
+### 🎯 Decision Framework
+- **[workflow_decision_demo.py](workflow_decision_demo.py)**  
+  *Interactive decision tree: When to build agents vs traditional automation*
+
+### 🎮 Demo Runner
+- **[run_all_demos.py](run_all_demos.py)**  
+  *Execute all demonstrations in sequence with optional interactive mode*
+
+## 🚀 Quick Start
+
+### Run Individual Demos
+
+```bash
+# Basic agent concepts
+python demo/basic_agent_demo.py
+
+# Multi-agent orchestration patterns
+python demo/orchestration_demo.py
+
+# Safety guardrails system
+python demo/safety_guardrails_demo.py
+
+# Workflow decision framework (interactive)
+python demo/workflow_decision_demo.py
+```
+
+### Run All Demos
+
+```bash
+# Run all demonstrations
+python demo/run_all_demos.py
+
+# Run with interactive prompts
+python demo/run_all_demos.py --interactive
+```
 - Human intervention triggers
 
 ### 4. Advanced Orchestration (`advanced_orchestration_demo.py`)
