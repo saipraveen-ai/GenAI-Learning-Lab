@@ -1,0 +1,92 @@
+flowchart TB
+    %% Context Input Sources
+    subgraph INPUTS["🔍 Context Input Sources"]
+        USER_INPUT[👤 User Input<br/>Natural language requests<br/>Preferences & feedback]
+        ENV_DATA[🌡️ Environmental Data<br/>Temperature, humidity<br/>Air quality, lighting]
+        TEMPORAL[⏰ Temporal Context<br/>Time of day, season<br/>Calendar events, schedules]
+        OCCUPANCY[👥 Occupancy Data<br/>People count, movement<br/>Activity patterns]
+        EXTERNAL[🌐 External APIs<br/>Weather, energy prices<br/>Traffic, news events]
+    end
+    
+    %% Context Processing Layers
+    subgraph LAYER1["🔍 Layer 1: Data Collection & Filtering"]
+        SENSORS[📊 Sensor Fusion<br/>Real-time data aggregation<br/>Quality validation<br/>Anomaly detection]
+        APIS[🔌 API Integration<br/>External data retrieval<br/>Rate limiting<br/>Error handling]
+        USER_TRACK[👤 User Interaction Tracking<br/>Preference learning<br/>Behavior patterns<br/>Feedback analysis]
+    end
+    
+    subgraph LAYER2["🧠 Layer 2: Pattern Recognition & Memory"]
+        PATTERN[🔍 Pattern Recognition<br/>Historical trend analysis<br/>Correlation detection<br/>Seasonal adjustments]
+        MEMORY[💾 Contextual Memory<br/>Long-term preferences<br/>Successful strategies<br/>Failure patterns]
+        PREDICT[📈 Predictive Modeling<br/>Future state estimation<br/>Trend forecasting<br/>Scenario planning]
+    end
+    
+    subgraph LAYER3["⚙️ Layer 3: Context Integration & Reasoning"]
+        FUSION[🔗 Context Fusion<br/>Multi-source integration<br/>Conflict resolution<br/>Priority weighting]
+        REASONING[🎯 Contextual Reasoning<br/>Situation assessment<br/>Goal interpretation<br/>Strategy formulation]
+        ADAPTATION[🔄 Dynamic Adaptation<br/>Real-time adjustments<br/>Learning updates<br/>Strategy refinement]
+    end
+    
+    %% Output Actions
+    subgraph OUTPUTS["⚡ Context-Aware Actions"]
+        IMMEDIATE[⚡ Immediate Actions<br/>System adjustments<br/>User notifications<br/>Emergency responses]
+        STRATEGIC[📋 Strategic Planning<br/>Multi-step workflows<br/>Resource optimization<br/>Goal achievement]
+        LEARNING[📚 Learning Updates<br/>Model improvements<br/>Preference updates<br/>Strategy refinement]
+    end
+    
+    %% Example Scenarios
+    subgraph EXAMPLES["💡 Context Awareness Examples"]
+        EX1[🌡️ Temperature Example:<br/>20°C request at 2pm<br/>+ Hot summer day<br/>+ Conference room<br/>+ 30 people expected<br/>→ Pre-cool to 18°C]
+        
+        EX2[💡 Lighting Example:<br/>Bright lights request<br/>+ Presentation mode<br/>+ Afternoon sun<br/>+ Energy peak hours<br/>→ Adjust blinds first]
+        
+        EX3[🔒 Security Example:<br/>After-hours access<br/>+ Known employee<br/>+ Scheduled meeting<br/>+ Weather emergency<br/>→ Allow with monitoring]
+    end
+    
+    %% Connections between layers
+    USER_INPUT --> SENSORS
+    ENV_DATA --> SENSORS
+    TEMPORAL --> SENSORS
+    OCCUPANCY --> SENSORS
+    EXTERNAL --> APIS
+    
+    SENSORS --> PATTERN
+    APIS --> PATTERN
+    USER_TRACK --> MEMORY
+    
+    PATTERN --> FUSION
+    MEMORY --> FUSION
+    PREDICT --> REASONING
+    
+    FUSION --> REASONING
+    REASONING --> ADAPTATION
+    
+    ADAPTATION --> IMMEDIATE
+    ADAPTATION --> STRATEGIC
+    ADAPTATION --> LEARNING
+    
+    %% Feedback loops
+    LEARNING -.-> MEMORY
+    IMMEDIATE -.-> USER_TRACK
+    STRATEGIC -.-> PREDICT
+    
+    %% Example connections
+    REASONING -.-> EX1
+    REASONING -.-> EX2
+    REASONING -.-> EX3
+    
+    %% Styling
+    classDef input fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef layer1 fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef layer2 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef layer3 fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef output fill:#ffebee,stroke:#d32f2f,stroke-width:2px
+    classDef example fill:#fafafa,stroke:#616161,stroke-width:1px,stroke-dasharray: 3 3
+    classDef subgraph_style fill:#f9f9f9,stroke:#333,stroke-width:1px
+    
+    class USER_INPUT,ENV_DATA,TEMPORAL,OCCUPANCY,EXTERNAL input
+    class SENSORS,APIS,USER_TRACK layer1
+    class PATTERN,MEMORY,PREDICT layer2
+    class FUSION,REASONING,ADAPTATION layer3
+    class IMMEDIATE,STRATEGIC,LEARNING output
+    class EX1,EX2,EX3 example

@@ -1,0 +1,59 @@
+flowchart TD
+    %% Decision tree for system selection
+    START[🎯 Choose System Type<br/>for Your Use Case]
+    
+    %% Key decision points
+    STATIC{Static Requirements?<br/>Always same inputs/outputs?}
+    LEARN{Need Learning?<br/>Adapt to patterns?}
+    CONTEXT{Context Awareness?<br/>Multi-factor decisions?}
+    MULTI{Multiple Systems?<br/>Coordination needed?}
+    
+    %% System recommendations
+    RULE[📋 Rule-Based System<br/>✅ Predictable workflows<br/>✅ Fast execution<br/>✅ Easy debugging<br/>❌ No adaptation]
+    
+    SMART[🔧 Smart Rule-Based<br/>✅ Business logic + analytics<br/>✅ Conditional processing<br/>⚠️ Limited learning<br/>❌ Manual updates]
+    
+    AGENT[🤖 AI Agent<br/>✅ Pattern recognition<br/>✅ Learning capability<br/>✅ Context awareness<br/>⚠️ Single domain focus]
+    
+    AGENTIC[🚀 Agentic AI System<br/>✅ Multi-agent coordination<br/>✅ Strategic planning<br/>✅ Complex goal handling<br/>✅ Emergent intelligence]
+    
+    %% Real-world examples
+    EX_RULE[📋 Examples:<br/>• Email filtering<br/>• Basic automation<br/>• Simple notifications]
+    
+    EX_SMART[🔧 Examples:<br/>• Business processes<br/>• Approval workflows<br/>• Data validation]
+    
+    EX_AGENT[🤖 Examples:<br/>• Chatbots<br/>• Recommendation systems<br/>• Smart thermostats]
+    
+    EX_AGENTIC[🚀 Examples:<br/>• Building management<br/>• Enterprise automation<br/>• Multi-domain coordination]
+    
+    %% Decision flow
+    START --> STATIC
+    
+    STATIC -->|Yes<br/>Fixed logic| RULE
+    STATIC -->|No<br/>Variable needs| LEARN
+    
+    LEARN -->|Basic<br/>Rule improvements| SMART
+    LEARN -->|Yes<br/>Pattern adaptation| CONTEXT
+    
+    CONTEXT -->|Simple<br/>Single domain| AGENT
+    CONTEXT -->|Complex<br/>Multi-system| MULTI
+    
+    MULTI -->|Yes<br/>Coordination needed| AGENTIC
+    MULTI -->|No<br/>Independent operation| AGENT
+    
+    %% Examples connections
+    RULE -.-> EX_RULE
+    SMART -.-> EX_SMART
+    AGENT -.-> EX_AGENT
+    AGENTIC -.-> EX_AGENTIC
+    
+    %% Styling
+    classDef decision fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef system fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef example fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px,stroke-dasharray: 3 3
+    classDef start fill:#e1f5fe,stroke:#0277bd,stroke-width:3px
+    
+    class START start
+    class STATIC,LEARN,CONTEXT,MULTI decision
+    class RULE,SMART,AGENT,AGENTIC system
+    class EX_RULE,EX_SMART,EX_AGENT,EX_AGENTIC example

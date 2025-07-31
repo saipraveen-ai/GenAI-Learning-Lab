@@ -1,0 +1,96 @@
+flowchart TD
+    %% User interaction layer
+    USER[👤 User Request<br/>Optimize building comfort<br/>for tomorrow's conference]
+    
+    %% Central orchestration
+    ORCHESTRATOR[🎯 Agentic AI Orchestrator<br/>Goal interpretation & planning<br/>Multi-system coordination]
+    
+    %% Specialized agents
+    HVAC[🌡️ HVAC Agent<br/>Temperature control<br/>Energy optimization<br/>Zone management]
+    
+    LIGHTING[💡 Lighting Agent<br/>Brightness control<br/>Automated scheduling<br/>Energy efficiency]
+    
+    SECURITY[🛡️ Security Agent<br/>Access control<br/>Occupancy detection<br/>Safety monitoring]
+    
+    ENERGY[⚡ Energy Agent<br/>Grid monitoring<br/>Cost optimization<br/>Peak load management]
+    
+    CALENDAR[📅 Calendar Agent<br/>Meeting schedules<br/>Room bookings<br/>Occupancy prediction]
+    
+    %% External data sources
+    WEATHER[🌤️ Weather API<br/>Temperature forecasts<br/>Humidity data<br/>Solar conditions]
+    
+    UTILITY[🏭 Utility API<br/>Energy pricing<br/>Peak hours<br/>Grid status]
+    
+    SENSORS[📊 IoT Sensors<br/>Real-time data<br/>Occupancy counts<br/>Environmental conditions]
+    
+    %% Memory and learning systems
+    MEMORY[💾 Vector Database<br/>Historical patterns<br/>User preferences<br/>System performance]
+    
+    ANALYTICS[📈 Analytics Engine<br/>Pattern recognition<br/>Predictive modeling<br/>Performance optimization]
+    
+    %% Execution layer
+    SYSTEMS[🏢 Building Systems<br/>Physical infrastructure<br/>Automated controls<br/>Real-time adjustments]
+    
+    %% Flow connections
+    USER --> ORCHESTRATOR
+    
+    ORCHESTRATOR --> HVAC
+    ORCHESTRATOR --> LIGHTING
+    ORCHESTRATOR --> SECURITY
+    ORCHESTRATOR --> ENERGY
+    ORCHESTRATOR --> CALENDAR
+    
+    %% Data inputs
+    WEATHER --> ORCHESTRATOR
+    UTILITY --> ORCHESTRATOR
+    SENSORS --> ORCHESTRATOR
+    
+    %% Agent coordination
+    HVAC -.-> ENERGY
+    LIGHTING -.-> ENERGY
+    SECURITY -.-> HVAC
+    CALENDAR -.-> HVAC
+    CALENDAR -.-> LIGHTING
+    
+    %% Memory and analytics
+    ORCHESTRATOR <--> MEMORY
+    ORCHESTRATOR <--> ANALYTICS
+    
+    %% Agents to memory
+    HVAC -.-> MEMORY
+    LIGHTING -.-> MEMORY
+    ENERGY -.-> MEMORY
+    
+    %% System execution
+    HVAC --> SYSTEMS
+    LIGHTING --> SYSTEMS
+    SECURITY --> SYSTEMS
+    
+    %% Feedback loop
+    SYSTEMS -.-> SENSORS
+    ANALYTICS --> ORCHESTRATOR
+    
+    %% Example coordination flow
+    COORD_EX[💭 Coordination Example:<br/>Conference tomorrow 9am-5pm<br/>30 people expected<br/>Energy costs peak 2-6pm]
+    
+    PLAN[📋 Orchestrated Plan:<br/>Pre-cool at 7am low rates<br/>Reduce lighting unused areas<br/>Security early access setup<br/>Energy shift loads off-peak]
+    
+    COORD_EX -.-> ORCHESTRATOR
+    ORCHESTRATOR -.-> PLAN
+    
+    %% Styling
+    classDef user fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    classDef orchestrator fill:#f3e5f5,stroke:#7b1fa2,stroke-width:3px
+    classDef agent fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef external fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef memory fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    classDef system fill:#e0f2f1,stroke:#00695c,stroke-width:2px
+    classDef example fill:#fafafa,stroke:#616161,stroke-width:1px,stroke-dasharray: 3 3
+    
+    class USER user
+    class ORCHESTRATOR orchestrator
+    class HVAC,LIGHTING,SECURITY,ENERGY,CALENDAR agent
+    class WEATHER,UTILITY,SENSORS external
+    class MEMORY,ANALYTICS memory
+    class SYSTEMS system
+    class COORD_EX,PLAN example

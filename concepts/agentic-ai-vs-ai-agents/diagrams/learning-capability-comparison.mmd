@@ -1,0 +1,63 @@
+block-beta
+    columns 4
+    
+    %% Headers
+    HEADER1["🏷️ System Type"]
+    HEADER2["📚 Learning Ability"]  
+    HEADER3["🧠 Memory System"]
+    HEADER4["🔄 Adaptation Examples"]
+    
+    %% Rule-Based System Row
+    RULE_TYPE["📋 Rule-Based System"]
+    RULE_LEARN["❌ No Learning - Fixed logic only - Manual updates required"]
+    RULE_MEM["❌ No Memory - Stateless operation - No pattern storage"]
+    RULE_EX["🌡️ Thermostat: Always 20°C target - Never adapts to preferences - Same behavior daily"]
+    
+    %% AI Agent Row  
+    AGENT_TYPE["🤖 AI Agent"]
+    AGENT_LEARN["✅ Pattern Learning - Adapts from experience - Single domain focus"]
+    AGENT_MEM["✅ Local Memory - Stores patterns - Session history"]
+    AGENT_EX["🌡️ Smart Thermostat: Learns user adjustments - Builds time patterns - Adapts to preferences"]
+    
+    %% Agentic AI Row
+    AGENTIC_TYPE["🚀 Agentic AI System"]
+    AGENTIC_LEARN["✅ Multi-Domain Learning - Real-time adaptation - Strategic planning"]
+    AGENTIC_MEM["✅ Comprehensive Memory - Cross-system knowledge - Persistent learning"]
+    AGENTIC_EX["🏢 Building Intelligence: Coordinates multiple systems - Learns from all sensors - Optimizes energy + comfort"]
+    
+    %% Learning Scenario Examples
+    space
+    SCENARIO["📊 Learning Scenario: User prefers 22°C in evening"]
+    space:2
+    
+    RULE_SCENARIO["🔴 Rule-Based Response: Maintains 20°C - No adaptation - User must manually adjust"]
+    AGENT_SCENARIO["🟡 AI Agent Response: After 3 days notices pattern - Adjusts evening target - Learns individual preference"]
+    AGENTIC_SCENARIO["🟢 Agentic AI Response: Day 1 notices pattern - Coordinates with calendar - Predicts + pre-adjusts - Optimizes across building"]
+    space
+    
+    %% Memory Persistence Examples
+    space
+    MEMORY["💾 Memory Persistence: System restart scenario"]
+    space:2
+    
+    RULE_MEM_EX["🔴 Rule-Based: No memory loss - Same fixed behavior - No learning to preserve"]
+    AGENT_MEM_EX["🟡 AI Agent: May lose session data - Rebuilds patterns - Local memory only"]
+    AGENTIC_MEM_EX["🟢 Agentic AI: Persistent memory - Retains all learning - Cross-system knowledge"]
+    space
+    
+    %% Connections showing progression
+    RULE_TYPE --> AGENT_TYPE
+    AGENT_TYPE --> AGENTIC_TYPE
+    
+    %% Styling
+    classDef header fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
+    classDef rule fill:#ffebee,stroke:#d32f2f,stroke-width:2px
+    classDef agent fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef agentic fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef scenario fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    
+    class HEADER1,HEADER2,HEADER3,HEADER4 header
+    class RULE_TYPE,RULE_LEARN,RULE_MEM,RULE_EX,RULE_SCENARIO,RULE_MEM_EX rule
+    class AGENT_TYPE,AGENT_LEARN,AGENT_MEM,AGENT_EX,AGENT_SCENARIO,AGENT_MEM_EX agent
+    class AGENTIC_TYPE,AGENTIC_LEARN,AGENTIC_MEM,AGENTIC_EX,AGENTIC_SCENARIO,AGENTIC_MEM_EX agentic
+    class SCENARIO,MEMORY scenario
