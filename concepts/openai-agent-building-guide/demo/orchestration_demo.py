@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Multi-Agent Orchestration Patterns Demo
-======================================
+Advanced Multi-Agent Orchestration Patterns Demo
+===============================================
 
 Demonstrates Manager Pattern vs Handoff Pattern for multi-agent coordination.
 Shows how different patterns handle task delegation, coordination, and quality control.
