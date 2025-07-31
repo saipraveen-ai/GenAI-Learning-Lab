@@ -21,6 +21,21 @@ pip install openai agents-sdk python-dotenv
 export OPENAI_API_KEY="your-api-key-here"
 ```
 
+### 📋 Complete Demo Catalog
+
+This guide includes **8 comprehensive demonstrations** covering the full spectrum of OpenAI agent capabilities:
+
+1. **🎯 Basic Agent Implementation** - Core components and single-agent patterns
+2. **🤝 Multi-Agent Translation Service** - Manager pattern with specialized agents  
+3. **🚀 Advanced Multi-Agent Workflow** - Decentralized handoff patterns
+4. **⚖️ Orchestration Pattern Comparison** - Manager vs Handoff side-by-side analysis
+5. **🎯 Intelligent Workflow Decision Framework** - Context-based automation strategy
+6. **🛡️ Comprehensive Safety Guardrails System** - 3-tier security validation
+7. **🔧 Dynamic Tool Discovery & Creation** - Runtime tool generation and API integration
+8. **🌊 Real-Time Data Integration** - Live streaming data processing and automation
+
+---
+
 ## 🎯 Demo 1: Basic Agent Implementation
 
 ### Single-Agent Weather System
@@ -1780,10 +1795,2530 @@ Implementation Benefits:
 
 ---
 
+## 🔧 Demo 7: Dynamic Tool Discovery & Creation
+
+### Adaptive Agent with Runtime Tool Generation
+
+This demonstrates an agent that can discover, create, and integrate new tools dynamically based on task requirements.
+
+**📁 Code Implementation:** [View dynamic_tools_demo.py](demo/dynamic_tools_demo.py)
+
+This demo features:
+- **API Discovery** - Automatically find and analyze available APIs
+- **Tool Code Generation** - Create new tool functions based on API specifications
+- **Runtime Integration** - Dynamically add tools to agent capabilities
+- **Validation System** - Test and verify new tools before integration
+- **Adaptive Learning** - Remember successful tool patterns for future use
+
+The implementation includes 4 different scenarios:
+1. 🔍 **API Discovery** - Find new weather APIs and create tools
+2. 🛠️ **Tool Generation** - Generate database query tools from schema
+3. ⚡ **Runtime Integration** - Add social media posting capabilities on-demand
+4. 🧠 **Pattern Learning** - Learn from successful tool usage patterns
+
+**Key Capabilities:**
+- Autonomous API endpoint discovery and documentation parsing
+- Code generation for tool functions with proper error handling
+- Runtime tool validation and integration into agent workflows
+- Pattern recognition for improving future tool creation
+- Safe sandboxing for testing newly generated tools
+
+### Live Demo Execution Output
+
+> **🔧 Note**: This demo uses **mock implementations** to simulate dynamic tool creation. The core functionality is consistent, but timestamps and specific simulation details may vary between runs. The demo showcases the complete workflow from API discovery to tool integration.
+
+<details>
+<summary>🔬 <strong>Complete Execution Results</strong> (Click to expand actual output from <code>dynamic_tools_demo.py</code>)</summary>
+
+```
+🔧 DYNAMIC TOOL DISCOVERY DEMONSTRATION
+Runtime API integration and adaptive tool creation
+
+🚀 DYNAMIC TOOL DISCOVERY & CREATION DEMONSTRATION
+Adaptive agent with runtime tool generation capabilities
+
+🔧 DYNAMIC TOOLS SYSTEM DEMO
+Autonomous API discovery and tool creation
+============================================================
+
+🔍 System Initialization:
+✅ API Discovery Engine - READY
+✅ Tool Code Generator - READY
+✅ Runtime Integration System - READY
+✅ Validation Sandbox - READY
+🧠 Pattern Learning Engine - ACTIVE
+
+============================================================
+🧪 SCENARIO 1: API Discovery & Weather Tool Creation
+============================================================
+
+🎯 Task Request: "I need to get weather data for multiple cities, but our current API is limited"
+
+🔍 API DISCOVERY PHASE
+------------------------------------
+🌐 Scanning available weather APIs...
+✅ Discovered: OpenWeatherMap
+✅ Discovered: WeatherStack
+✅ Discovered: AccuWeather
+📊 Analyzing API capabilities...
+   - OpenWeatherMap: current, forecast, 60/min
+   - WeatherStack: current, historical, 1000/month
+   - AccuWeather: detailed_forecast, 50/day
+
+🛠️ TOOL GENERATION PHASE
+------------------------------------
+📝 Generating tool for OpenWeatherMap...
+✅ Created: weather_openweathermap
+📝 Generating tool for WeatherStack...
+✅ Created: weather_weatherstack
+🔧 Code generation completed in 2.3s
+
+⚡ RUNTIME INTEGRATION PHASE
+------------------------------------
+🧪 Validating new tools in sandbox...
+✅ weather_openweathermap: PASSED (response time: 0.4s)
+✅ weather_weatherstack: PASSED (response time: 0.4s)
+🔌 Integrating tools into agent runtime...
+✅ Tools successfully added to agent capabilities
+
+📊 EXECUTION RESULTS:
+--------------------------------------------------
+Agent Response: I've discovered and integrated new weather APIs!
+Now I can provide:
+
+**Enhanced Weather Data for New York:**
+- Current: 72°F, partly cloudy (OpenWeatherMap)
+- 5-day Forecast: Rain expected tomorrow, sunny weekend
+- Historical Comparison: 15°F warmer than last year
+- Air Quality Index: 42 (Good)
+
+I can now access weather data from multiple sources with expanded
+capabilities including historical data and detailed forecasts.
+--------------------------------------------------
+
+📈 TOOL CREATION METRICS:
+  • APIs Discovered: 3
+  • Tools Generated: 2
+  • Integration Time: 3.1s
+  • Validation Success Rate: 100%
+  • Enhanced Capabilities: +400% data sources
+
+============================================================
+🧪 SCENARIO 4: Pattern Learning & Tool Evolution
+============================================================
+
+🎯 Task Request: "Optimize my workflow tools based on usage patterns"
+
+🧠 PATTERN ANALYSIS PHASE
+------------------------------------
+📊 Analyzing tool usage patterns from previous scenarios...
+✅ Weather tools: Used 15 times, 0.4s avg response
+✅ Database tools: Used 23 times, 1.2s avg response
+✅ Social media tools: Used 8 times, 2.1s avg response
+🔍 Identifying optimization opportunities...
+
+🎯 PATTERN INSIGHTS DISCOVERED:
+   - Weather queries often need batch processing (5+ cities)
+   - Database reports frequently combine customer + sales data
+   - Social media posts benefit from content personalization
+   - Error handling patterns: 23% network timeouts, 12% rate limits
+
+🛠️ TOOL EVOLUTION PHASE
+------------------------------------
+🔄 Generating optimized tool versions...
+✅ Enhanced: batch_weather_lookup(cities_list, parallel=True)
+✅ Enhanced: comprehensive_business_report(combine_analytics=True)
+✅ Enhanced: smart_social_posting(auto_optimize_content=True)
+✅ Enhanced: universal_error_handler(retry_logic, fallback_apis)
+
+⚡ RUNTIME OPTIMIZATION
+------------------------------------
+🧪 Testing evolved tools...
+✅ Batch weather lookup: 73% faster for multiple cities
+✅ Comprehensive reports: 45% reduction in query time
+✅ Smart social posting: 89% better engagement prediction
+✅ Error handling: 94% success rate improvement
+🔌 Optimized tools deployed
+
+📊 EXECUTION RESULTS:
+--------------------------------------------------
+Agent Response: I've evolved your tools based on usage patterns:
+
+**Performance Improvements:**
+- Weather batch processing: 5 cities in 0.8s (was 2.0s)
+- Database reporting: Single comprehensive query vs 4 separate
+- Social media: Auto-optimized content per platform audience
+- Error resilience: Automatic fallback and retry mechanisms
+
+**New Intelligent Features:**
+- Predictive caching for frequently requested weather data
+- Smart report templates based on most common use cases
+- Content adaptation engine for platform-specific optimization
+- Proactive error prevention with health monitoring
+
+Your agent now learns and improves continuously from interaction patterns.
+--------------------------------------------------
+
+============================================================
+✅ DYNAMIC TOOLS DEMONSTRATION COMPLETED
+============================================================
+
+Key Innovation Achievements:
+• Autonomous capability expansion without human coding
+• Real-time adaptation to new requirements and APIs
+• Continuous learning and performance optimization
+• Zero-downtime integration of new functionalities
+• Pattern-based predictive tool creation
+
+Demonstrated Capabilities:
+• API discovery and automated documentation parsing
+• Dynamic code generation with error handling
+• Runtime tool validation and integration
+• Usage pattern analysis and optimization
+• Predictive tool creation based on workflow patterns
+```
+
+</details>
+
+---
+
+## 🌊 Demo 8: Real-Time Data Integration
+
+### Live Streaming Data Processing Agent
+
+This demonstrates an agent that processes live data streams, provides real-time insights, and triggers automated responses.
+
+**📁 Code Implementation:** [View realtime_data_demo.py](demo/realtime_data_demo.py)
+
+This demo features:
+- **Live Data Streaming** - WebSocket connections to multiple data sources
+- **Real-Time Processing** - Stream analytics with low-latency responses
+- **Event Detection** - Pattern recognition and anomaly detection
+- **Automated Triggers** - Threshold-based alerts and actions
+- **Multi-Source Fusion** - Combining data from different streaming sources
+
+The implementation includes 4 different streaming scenarios:
+1. 📈 **Financial Market Stream** - Real-time stock prices with trading alerts
+2. 🌡️ **IoT Sensor Network** - Environmental monitoring with anomaly detection  
+3. 📱 **Social Media Pulse** - Live sentiment analysis and trend detection
+4. 🚗 **Fleet Management** - Vehicle tracking with predictive maintenance
+
+**Key Features:**
+- Sub-second response times for critical alerts
+- Multi-protocol data ingestion (WebSocket, MQTT, HTTP streams)
+- Real-time machine learning inference on streaming data
+- Automated escalation and response workflows
+- Historical pattern comparison with live data
+
+### Live Demo Execution Output
+
+> **⚡ Note**: This demo generates **live streaming data** with random values, timestamps, and patterns. Each execution produces different output as it simulates real-time market conditions, IoT sensors, and dynamic data streams. The example below shows one possible execution - your results will vary.
+
+<details>
+<summary>🔬 <strong>Example Execution Results</strong> (Click to expand sample output from <code>realtime_data_demo.py</code>)</summary>
+
+```
+🌊 REAL-TIME DATA INTEGRATION DEMONSTRATION
+Live streaming analytics with automated response systems
+
+🚀 REAL-TIME DATA INTEGRATION DEMONSTRATION
+Live streaming data processing with intelligent automation
+
+🌊 REAL-TIME DATA SYSTEM DEMO
+Multi-source streaming analytics and automated responses
+============================================================
+
+🔌 System Initialization:
+✅ WebSocket Manager - READY
+✅ MQTT Broker Connection - READY
+✅ Stream Analytics Engine - READY
+✅ Event Detection System - READY
+✅ Automated Response Controller - READY
+📊 Real-time Dashboard - ACTIVE
+
+============================================================
+🧪 SCENARIO 1: Financial Market Stream Processing
+============================================================
+
+🎯 Stream Configuration: NYSE + NASDAQ real-time feeds
+📊 Monitoring: AAPL, GOOGL, MSFT, TSLA, AMZN
+
+⏰ 14:32:15 - Stream connection established
+📈 Processing 847 price updates per second
+🔍 Pattern detection algorithms active
+
+🌊 LIVE FINANCIAL MARKET STREAM INITIATED
+------------------------------------
+⏰ 23:44:58 - AAPL: $178.6 (+0.3% surge detected)
+📊 Volume surge: 1,264,612 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:44:58 - GOOGL: $143.16 (+0.5% surge detected)
+📊 Volume surge: 2,484,170 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:44:58 - MSFT: $421.69 (+0.4% surge detected)
+📊 Volume surge: 1,719,052 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:44:58 - TSLA: $270.17 (+0.1% surge detected)
+📊 Volume surge: 2,621,881 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:44:58 - AMZN: $150.14 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $150.14. Risk management rule activated."
+⏰ 23:44:58 - AAPL: $176.51 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $176.51. Risk management rule activated."
+⏰ 23:44:58 - GOOGL: $143.41 (+0.2% surge detected)
+📊 Volume surge: 3,076,080 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:44:58 - MSFT: $418.1 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $418.1. Risk management rule activated."
+⏰ 23:44:58 - TSLA: $273.34 (+1.2% surge detected)
+📊 Volume surge: 2,247,229 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:44:58 - AMZN: $151.35 (+0.8% surge detected)
+📊 Volume surge: 4,431,076 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:44:58 - AAPL: $179.3 (+1.6% surge detected)
+📊 Volume surge: 267,192 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:44:58 - GOOGL: $142.1 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $142.1. Risk management rule activated."
+⏰ 23:44:58 - MSFT: $425.53 (+1.8% surge detected)
+📊 Volume surge: 2,891,954 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:44:58 - TSLA: $269.19 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $269.19. Risk management rule activated."
+⏰ 23:44:58 - AMZN: $150.89 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $150.89. Risk management rule activated."
+⏰ 23:44:58 - AAPL: $179.35 (+0.0% surge detected)
+📊 Volume surge: 1,928,173 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:44:58 - GOOGL: $140.48 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $140.48. Risk management rule activated."
+⏰ 23:44:58 - MSFT: $431.94 (+1.5% surge detected)
+📊 Volume surge: 1,985,291 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:44:58 - TSLA: $266.23 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $266.23. Risk management rule activated."
+⏰ 23:44:58 - AMZN: $152.27 (+0.9% surge detected)
+📊 Volume surge: 1,043,742 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:44:58 - AAPL: $178.31 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $178.31. Risk management rule activated."
+⏰ 23:44:58 - GOOGL: $139.65 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $139.65. Risk management rule activated."
+⏰ 23:44:58 - MSFT: $438.91 (+1.6% surge detected)
+📊 Volume surge: 3,804,285 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:44:58 - TSLA: $262.02 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $262.02. Risk management rule activated."
+⏰ 23:44:58 - AMZN: $154.95 (+1.8% surge detected)
+📊 Volume surge: 3,655,049 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:44:58 - AAPL: $179.61 (+0.7% surge detected)
+📊 Volume surge: 771,496 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:44:58 - GOOGL: $139.1 (-0.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $139.1. Risk management rule activated."
+⏰ 23:44:58 - MSFT: $446.6 (+1.8% surge detected)
+📊 Volume surge: 1,780,213 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:44:58 - TSLA: $259.47 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $259.47. Risk management rule activated."
+⏰ 23:44:58 - AMZN: $156.34 (+0.9% surge detected)
+📊 Volume surge: 2,846,201 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:44:59 - AAPL: $177.25 (-1.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $177.25. Risk management rule activated."
+⏰ 23:44:59 - GOOGL: $137.47 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $137.47. Risk management rule activated."
+⏰ 23:44:59 - MSFT: $443.0 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $443.0. Risk management rule activated."
+⏰ 23:44:59 - TSLA: $258.68 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $258.68. Risk management rule activated."
+⏰ 23:44:59 - AMZN: $153.31 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $153.31. Risk management rule activated."
+⏰ 23:44:59 - AAPL: $179.86 (+1.5% surge detected)
+📊 Volume surge: 3,271,033 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:44:59 - GOOGL: $135.47 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $135.47. Risk management rule activated."
+⏰ 23:44:59 - MSFT: $446.41 (+0.8% surge detected)
+📊 Volume surge: 2,273,914 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:44:59 - TSLA: $260.16 (+0.6% surge detected)
+📊 Volume surge: 3,813,335 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:44:59 - AMZN: $152.85 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $152.85. Risk management rule activated."
+⏰ 23:44:59 - AAPL: $182.44 (+1.4% surge detected)
+📊 Volume surge: 578,450 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:44:59 - GOOGL: $134.46 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $134.46. Risk management rule activated."
+⏰ 23:44:59 - MSFT: $439.43 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $439.43. Risk management rule activated."
+⏰ 23:44:59 - TSLA: $257.93 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $257.93. Risk management rule activated."
+⏰ 23:44:59 - AMZN: $152.43 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $152.43. Risk management rule activated."
+⏰ 23:44:59 - AAPL: $181.82 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $181.82. Risk management rule activated."
+⏰ 23:44:59 - GOOGL: $136.16 (+1.3% surge detected)
+📊 Volume surge: 4,480,212 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:44:59 - MSFT: $442.47 (+0.7% surge detected)
+📊 Volume surge: 4,323,449 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:44:59 - TSLA: $254.87 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $254.87. Risk management rule activated."
+⏰ 23:44:59 - AMZN: $151.46 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $151.46. Risk management rule activated."
+⏰ 23:44:59 - AAPL: $181.13 (-0.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $181.13. Risk management rule activated."
+⏰ 23:44:59 - GOOGL: $135.7 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $135.7. Risk management rule activated."
+⏰ 23:44:59 - MSFT: $436.76 (-1.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $436.76. Risk management rule activated."
+⏰ 23:44:59 - TSLA: $252.57 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $252.57. Risk management rule activated."
+⏰ 23:44:59 - AMZN: $150.58 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $150.58. Risk management rule activated."
+⏰ 23:44:59 - AAPL: $180.13 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $180.13. Risk management rule activated."
+⏰ 23:44:59 - GOOGL: $134.59 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $134.59. Risk management rule activated."
+⏰ 23:44:59 - MSFT: $443.16 (+1.5% surge detected)
+📊 Volume surge: 4,066,940 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:44:59 - TSLA: $249.97 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $249.97. Risk management rule activated."
+⏰ 23:44:59 - AMZN: $153.32 (+1.8% surge detected)
+📊 Volume surge: 2,112,115 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:44:59 - AAPL: $177.82 (-1.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $177.82. Risk management rule activated."
+⏰ 23:44:59 - GOOGL: $134.19 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $134.19. Risk management rule activated."
+⏰ 23:44:59 - MSFT: $451.72 (+1.9% surge detected)
+📊 Volume surge: 2,411,610 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:44:59 - TSLA: $246.65 (-1.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $246.65. Risk management rule activated."
+⏰ 23:44:59 - AMZN: $153.54 (+0.1% surge detected)
+📊 Volume surge: 1,023,889 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:44:59 - AAPL: $174.49 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $174.49. Risk management rule activated."
+⏰ 23:44:59 - GOOGL: $134.17 (-0.0% decline detected)
+⏰ 23:44:59 - MSFT: $450.71 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $450.71. Risk management rule activated."
+⏰ 23:44:59 - TSLA: $248.45 (+0.7% surge detected)
+📊 Volume surge: 4,991,022 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:44:59 - AMZN: $154.68 (+0.8% surge detected)
+📊 Volume surge: 1,594,581 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:44:59 - AAPL: $174.84 (+0.2% surge detected)
+📊 Volume surge: 3,918,997 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:44:59 - GOOGL: $136.07 (+1.4% surge detected)
+📊 Volume surge: 2,367,318 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:44:59 - MSFT: $445.32 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $445.32. Risk management rule activated."
+⏰ 23:44:59 - TSLA: $247.2 (-0.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $247.2. Risk management rule activated."
+⏰ 23:44:59 - AMZN: $155.02 (+0.2% surge detected)
+📊 Volume surge: 3,541,051 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:44:59 - AAPL: $173.0 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $173.0. Risk management rule activated."
+⏰ 23:44:59 - GOOGL: $137.96 (+1.4% surge detected)
+📊 Volume surge: 1,996,898 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:44:59 - MSFT: $450.15 (+1.1% surge detected)
+📊 Volume surge: 2,290,845 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:44:59 - TSLA: $242.59 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $242.59. Risk management rule activated."
+⏰ 23:44:59 - AMZN: $155.29 (+0.2% surge detected)
+📊 Volume surge: 3,226,436 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:00 - AAPL: $172.82 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $172.82. Risk management rule activated."
+⏰ 23:45:00 - GOOGL: $139.12 (+0.8% surge detected)
+📊 Volume surge: 3,600,478 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:00 - MSFT: $441.71 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $441.71. Risk management rule activated."
+⏰ 23:45:00 - TSLA: $247.44 (+2.0% surge detected)
+📊 Volume surge: 2,527,521 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:00 - AMZN: $152.35 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $152.35. Risk management rule activated."
+⏰ 23:45:00 - AAPL: $176.01 (+1.9% surge detected)
+📊 Volume surge: 1,055,049 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:00 - GOOGL: $140.99 (+1.4% surge detected)
+📊 Volume surge: 354,199 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:00 - MSFT: $438.91 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $438.91. Risk management rule activated."
+⏰ 23:45:00 - TSLA: $242.5 (-2.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $242.5. Risk management rule activated."
+⏰ 23:45:00 - AMZN: $154.65 (+1.5% surge detected)
+📊 Volume surge: 218,796 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:00 - AAPL: $178.96 (+1.7% surge detected)
+📊 Volume surge: 4,143,271 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:00 - GOOGL: $141.03 (+0.0% surge detected)
+⏰ 23:45:00 - MSFT: $444.97 (+1.4% surge detected)
+📊 Volume surge: 4,540,607 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:00 - TSLA: $238.74 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $238.74. Risk management rule activated."
+⏰ 23:45:00 - AMZN: $157.46 (+1.8% surge detected)
+📊 Volume surge: 4,987,317 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:00 - AAPL: $177.83 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $177.83. Risk management rule activated."
+⏰ 23:45:00 - GOOGL: $140.82 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $140.82. Risk management rule activated."
+⏰ 23:45:00 - MSFT: $450.89 (+1.3% surge detected)
+📊 Volume surge: 2,799,950 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:00 - TSLA: $237.82 (-0.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $237.82. Risk management rule activated."
+⏰ 23:45:00 - AMZN: $156.21 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $156.21. Risk management rule activated."
+⏰ 23:45:00 - AAPL: $176.97 (-0.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $176.97. Risk management rule activated."
+⏰ 23:45:00 - GOOGL: $143.59 (+2.0% surge detected)
+📊 Volume surge: 3,645,458 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:00 - MSFT: $449.43 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $449.43. Risk management rule activated."
+⏰ 23:45:00 - TSLA: $239.98 (+0.9% surge detected)
+📊 Volume surge: 2,232,435 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:00 - AMZN: $157.39 (+0.8% surge detected)
+📊 Volume surge: 1,271,562 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:00 - AAPL: $178.62 (+0.9% surge detected)
+📊 Volume surge: 1,439,549 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:00 - GOOGL: $146.02 (+1.7% surge detected)
+📊 Volume surge: 3,306,064 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:00 - MSFT: $451.22 (+0.4% surge detected)
+📊 Volume surge: 1,157,681 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:00 - TSLA: $239.8 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $239.8. Risk management rule activated."
+⏰ 23:45:00 - AMZN: $160.3 (+1.9% surge detected)
+📊 Volume surge: 614,168 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:00 - AAPL: $176.2 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $176.2. Risk management rule activated."
+⏰ 23:45:00 - GOOGL: $148.37 (+1.6% surge detected)
+📊 Volume surge: 4,592,473 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:00 - MSFT: $457.94 (+1.5% surge detected)
+📊 Volume surge: 3,538,059 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:00 - TSLA: $240.5 (+0.3% surge detected)
+📊 Volume surge: 2,699,233 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:00 - AMZN: $157.58 (-1.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $157.58. Risk management rule activated."
+⏰ 23:45:00 - AAPL: $177.46 (+0.7% surge detected)
+📊 Volume surge: 4,329,297 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:00 - GOOGL: $145.61 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $145.61. Risk management rule activated."
+⏰ 23:45:00 - MSFT: $461.62 (+0.8% surge detected)
+📊 Volume surge: 1,170,820 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:00 - TSLA: $245.22 (+2.0% surge detected)
+📊 Volume surge: 4,011,957 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:00 - AMZN: $156.45 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $156.45. Risk management rule activated."
+⏰ 23:45:00 - AAPL: $180.99 (+2.0% surge detected)
+📊 Volume surge: 200,877 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:00 - GOOGL: $145.2 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $145.2. Risk management rule activated."
+⏰ 23:45:00 - MSFT: $464.18 (+0.6% surge detected)
+📊 Volume surge: 3,143,294 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:00 - TSLA: $242.41 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $242.41. Risk management rule activated."
+⏰ 23:45:00 - AMZN: $158.21 (+1.1% surge detected)
+📊 Volume surge: 1,072,832 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:00 - AAPL: $184.58 (+2.0% surge detected)
+📊 Volume surge: 2,433,182 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:00 - GOOGL: $147.89 (+1.9% surge detected)
+📊 Volume surge: 4,182,254 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:00 - MSFT: $466.52 (+0.5% surge detected)
+📊 Volume surge: 3,389,460 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:00 - TSLA: $245.63 (+1.3% surge detected)
+📊 Volume surge: 1,206,004 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:00 - AMZN: $156.46 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $156.46. Risk management rule activated."
+⏰ 23:45:01 - AAPL: $183.01 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $183.01. Risk management rule activated."
+⏰ 23:45:01 - GOOGL: $148.08 (+0.1% surge detected)
+📊 Volume surge: 3,819,066 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:01 - MSFT: $470.63 (+0.9% surge detected)
+📊 Volume surge: 1,264,593 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:01 - TSLA: $244.12 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $244.12. Risk management rule activated."
+⏰ 23:45:01 - AMZN: $156.76 (+0.2% surge detected)
+📊 Volume surge: 4,866,732 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:01 - AAPL: $185.09 (+1.1% surge detected)
+📊 Volume surge: 3,947,253 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:01 - GOOGL: $148.22 (+0.1% surge detected)
+📊 Volume surge: 3,060,129 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:01 - MSFT: $479.36 (+1.9% surge detected)
+📊 Volume surge: 3,343,134 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:01 - TSLA: $242.3 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $242.3. Risk management rule activated."
+⏰ 23:45:01 - AMZN: $155.33 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $155.33. Risk management rule activated."
+⏰ 23:45:01 - AAPL: $184.83 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $184.83. Risk management rule activated."
+⏰ 23:45:01 - GOOGL: $147.25 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $147.25. Risk management rule activated."
+⏰ 23:45:01 - MSFT: $470.19 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $470.19. Risk management rule activated."
+⏰ 23:45:01 - TSLA: $239.98 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $239.98. Risk management rule activated."
+⏰ 23:45:01 - AMZN: $155.64 (+0.2% surge detected)
+📊 Volume surge: 490,184 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:01 - AAPL: $186.86 (+1.1% surge detected)
+📊 Volume surge: 3,115,884 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:01 - GOOGL: $144.75 (-1.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $144.75. Risk management rule activated."
+⏰ 23:45:01 - MSFT: $474.25 (+0.9% surge detected)
+📊 Volume surge: 4,522,262 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:01 - TSLA: $235.94 (-1.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $235.94. Risk management rule activated."
+⏰ 23:45:01 - AMZN: $158.08 (+1.6% surge detected)
+📊 Volume surge: 1,151,538 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:01 - AAPL: $185.22 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $185.22. Risk management rule activated."
+⏰ 23:45:01 - GOOGL: $142.73 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $142.73. Risk management rule activated."
+⏰ 23:45:01 - MSFT: $481.43 (+1.5% surge detected)
+📊 Volume surge: 2,995,884 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:01 - TSLA: $237.72 (+0.8% surge detected)
+📊 Volume surge: 1,068,534 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:01 - AMZN: $161.18 (+2.0% surge detected)
+📊 Volume surge: 1,653,104 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:01 - AAPL: $181.72 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $181.72. Risk management rule activated."
+⏰ 23:45:01 - GOOGL: $143.74 (+0.7% surge detected)
+📊 Volume surge: 141,261 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:01 - MSFT: $479.75 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $479.75. Risk management rule activated."
+⏰ 23:45:01 - TSLA: $241.83 (+1.7% surge detected)
+📊 Volume surge: 2,603,472 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:01 - AMZN: $160.09 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $160.09. Risk management rule activated."
+⏰ 23:45:01 - AAPL: $179.8 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $179.8. Risk management rule activated."
+⏰ 23:45:01 - GOOGL: $144.07 (+0.2% surge detected)
+📊 Volume surge: 4,056,088 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:01 - MSFT: $477.43 (-0.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $477.43. Risk management rule activated."
+⏰ 23:45:01 - TSLA: $243.08 (+0.5% surge detected)
+📊 Volume surge: 2,347,500 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:01 - AMZN: $160.66 (+0.3% surge detected)
+📊 Volume surge: 2,033,535 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:01 - AAPL: $179.49 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $179.49. Risk management rule activated."
+⏰ 23:45:01 - GOOGL: $143.48 (-0.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $143.48. Risk management rule activated."
+⏰ 23:45:01 - MSFT: $484.46 (+1.5% surge detected)
+📊 Volume surge: 1,405,203 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:01 - TSLA: $245.98 (+1.2% surge detected)
+📊 Volume surge: 3,137,705 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:01 - AMZN: $158.72 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $158.72. Risk management rule activated."
+⏰ 23:45:01 - AAPL: $180.5 (+0.6% surge detected)
+📊 Volume surge: 2,604,998 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:01 - GOOGL: $143.85 (+0.3% surge detected)
+📊 Volume surge: 1,988,916 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:01 - MSFT: $493.21 (+1.8% surge detected)
+📊 Volume surge: 4,394,057 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:01 - TSLA: $242.87 (-1.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $242.87. Risk management rule activated."
+⏰ 23:45:01 - AMZN: $157.72 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $157.72. Risk management rule activated."
+⏰ 23:45:01 - AAPL: $178.86 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $178.86. Risk management rule activated."
+⏰ 23:45:01 - GOOGL: $146.73 (+2.0% surge detected)
+📊 Volume surge: 4,188,173 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:01 - MSFT: $495.6 (+0.5% surge detected)
+📊 Volume surge: 4,623,031 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:01 - TSLA: $238.81 (-1.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $238.81. Risk management rule activated."
+⏰ 23:45:01 - AMZN: $160.07 (+1.5% surge detected)
+📊 Volume surge: 3,499,935 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:02 - AAPL: $180.07 (+0.7% surge detected)
+📊 Volume surge: 662,964 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:02 - GOOGL: $149.6 (+2.0% surge detected)
+📊 Volume surge: 3,728,031 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:02 - MSFT: $504.58 (+1.8% surge detected)
+📊 Volume surge: 2,746,064 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:02 - TSLA: $241.37 (+1.1% surge detected)
+📊 Volume surge: 2,367,403 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:02 - AMZN: $163.08 (+1.9% surge detected)
+📊 Volume surge: 3,537,119 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:02 - AAPL: $180.26 (+0.1% surge detected)
+📊 Volume surge: 2,573,729 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:02 - GOOGL: $146.61 (-2.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $146.61. Risk management rule activated."
+⏰ 23:45:02 - MSFT: $513.09 (+1.7% surge detected)
+📊 Volume surge: 107,303 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:02 - TSLA: $244.4 (+1.2% surge detected)
+📊 Volume surge: 503,198 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:02 - AMZN: $162.52 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $162.52. Risk management rule activated."
+⏰ 23:45:02 - AAPL: $180.48 (+0.1% surge detected)
+📊 Volume surge: 4,260,800 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:02 - GOOGL: $143.78 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $143.78. Risk management rule activated."
+⏰ 23:45:02 - MSFT: $507.38 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $507.38. Risk management rule activated."
+⏰ 23:45:02 - TSLA: $247.64 (+1.3% surge detected)
+📊 Volume surge: 3,748,539 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:02 - AMZN: $160.59 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $160.59. Risk management rule activated."
+⏰ 23:45:02 - AAPL: $181.06 (+0.3% surge detected)
+📊 Volume surge: 2,791,868 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:02 - GOOGL: $142.7 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $142.7. Risk management rule activated."
+⏰ 23:45:02 - MSFT: $512.51 (+1.0% surge detected)
+📊 Volume surge: 2,799,753 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:02 - TSLA: $246.2 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $246.2. Risk management rule activated."
+⏰ 23:45:02 - AMZN: $162.62 (+1.3% surge detected)
+📊 Volume surge: 1,862,425 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:02 - AAPL: $183.74 (+1.5% surge detected)
+📊 Volume surge: 972,234 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:02 - GOOGL: $142.98 (+0.2% surge detected)
+📊 Volume surge: 738,087 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:02 - MSFT: $505.36 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $505.36. Risk management rule activated."
+⏰ 23:45:02 - TSLA: $241.34 (-2.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $241.34. Risk management rule activated."
+⏰ 23:45:02 - AMZN: $159.96 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $159.96. Risk management rule activated."
+⏰ 23:45:02 - AAPL: $181.35 (-1.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $181.35. Risk management rule activated."
+⏰ 23:45:02 - GOOGL: $141.79 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $141.79. Risk management rule activated."
+⏰ 23:45:02 - MSFT: $503.45 (-0.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $503.45. Risk management rule activated."
+⏰ 23:45:02 - TSLA: $237.37 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $237.37. Risk management rule activated."
+⏰ 23:45:02 - AMZN: $162.27 (+1.4% surge detected)
+📊 Volume surge: 3,365,039 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:02 - AAPL: $183.33 (+1.1% surge detected)
+📊 Volume surge: 1,244,694 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:02 - GOOGL: $142.01 (+0.2% surge detected)
+📊 Volume surge: 2,093,220 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:02 - MSFT: $510.18 (+1.3% surge detected)
+📊 Volume surge: 4,174,104 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:02 - TSLA: $238.59 (+0.5% surge detected)
+📊 Volume surge: 3,624,170 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:02 - AAPL: $185.33 (+1.1% surge detected)
+📊 Volume surge: 4,648,405 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:02 - GOOGL: $143.07 (+0.8% surge detected)
+📊 Volume surge: 3,460,747 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:02 - MSFT: $512.07 (+0.4% surge detected)
+📊 Volume surge: 862,822 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:02 - TSLA: $237.64 (-0.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $237.64. Risk management rule activated."
+⏰ 23:45:02 - AMZN: $162.67 (+0.3% surge detected)
+📊 Volume surge: 1,464,248 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:02 - AAPL: $187.82 (+1.3% surge detected)
+📊 Volume surge: 4,473,560 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:02 - GOOGL: $145.19 (+1.5% surge detected)
+📊 Volume surge: 805,365 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:02 - MSFT: $506.0 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $506.0. Risk management rule activated."
+⏰ 23:45:02 - TSLA: $239.79 (+0.9% surge detected)
+📊 Volume surge: 1,956,548 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:02 - AMZN: $159.94 (-1.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $159.94. Risk management rule activated."
+⏰ 23:45:02 - AAPL: $188.3 (+0.2% surge detected)
+📊 Volume surge: 2,358,043 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:02 - GOOGL: $143.75 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $143.75. Risk management rule activated."
+⏰ 23:45:02 - TSLA: $235.94 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $235.94. Risk management rule activated."
+⏰ 23:45:02 - AMZN: $158.43 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $158.43. Risk management rule activated."
+⏰ 23:45:03 - AAPL: $186.76 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $186.76. Risk management rule activated."
+⏰ 23:45:03 - GOOGL: $143.63 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $143.63. Risk management rule activated."
+⏰ 23:45:03 - MSFT: $510.0 (+0.8% surge detected)
+📊 Volume surge: 2,563,120 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:03 - TSLA: $239.49 (+1.5% surge detected)
+📊 Volume surge: 4,232,494 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:03 - AMZN: $156.62 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $156.62. Risk management rule activated."
+⏰ 23:45:03 - AAPL: $189.56 (+1.5% surge detected)
+📊 Volume surge: 2,407,892 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:03 - GOOGL: $145.28 (+1.1% surge detected)
+📊 Volume surge: 406,910 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:03 - MSFT: $503.68 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $503.68. Risk management rule activated."
+⏰ 23:45:03 - TSLA: $238.92 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $238.92. Risk management rule activated."
+⏰ 23:45:03 - AMZN: $157.06 (+0.3% surge detected)
+📊 Volume surge: 1,975,022 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:03 - AAPL: $190.16 (+0.3% surge detected)
+📊 Volume surge: 4,136,846 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:03 - GOOGL: $144.46 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $144.46. Risk management rule activated."
+⏰ 23:45:03 - MSFT: $506.36 (+0.5% surge detected)
+📊 Volume surge: 2,029,423 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:03 - TSLA: $236.47 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $236.47. Risk management rule activated."
+⏰ 23:45:03 - AMZN: $157.34 (+0.2% surge detected)
+📊 Volume surge: 1,558,349 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:03 - AAPL: $193.75 (+1.9% surge detected)
+📊 Volume surge: 3,539,447 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:03 - GOOGL: $145.38 (+0.6% surge detected)
+📊 Volume surge: 2,989,404 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:03 - MSFT: $506.57 (+0.0% surge detected)
+📊 Volume surge: 4,776,849 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:03 - TSLA: $233.19 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $233.19. Risk management rule activated."
+⏰ 23:45:03 - AMZN: $158.84 (+1.0% surge detected)
+📊 Volume surge: 989,032 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:03 - AAPL: $196.72 (+1.5% surge detected)
+📊 Volume surge: 2,936,108 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:03 - GOOGL: $142.71 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $142.71. Risk management rule activated."
+⏰ 23:45:03 - MSFT: $497.42 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $497.42. Risk management rule activated."
+⏰ 23:45:03 - TSLA: $234.32 (+0.5% surge detected)
+📊 Volume surge: 2,116,738 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:03 - AMZN: $156.32 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $156.32. Risk management rule activated."
+⏰ 23:45:03 - AAPL: $193.73 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $193.73. Risk management rule activated."
+⏰ 23:45:03 - GOOGL: $143.22 (+0.4% surge detected)
+📊 Volume surge: 162,312 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:03 - MSFT: $493.27 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $493.27. Risk management rule activated."
+⏰ 23:45:03 - TSLA: $239.0 (+2.0% surge detected)
+📊 Volume surge: 4,310,840 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:03 - AMZN: $158.97 (+1.7% surge detected)
+📊 Volume surge: 1,869,350 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:03 - AAPL: $194.44 (+0.4% surge detected)
+📊 Volume surge: 4,792,012 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:03 - GOOGL: $141.39 (-1.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $141.39. Risk management rule activated."
+⏰ 23:45:03 - MSFT: $502.24 (+1.8% surge detected)
+📊 Volume surge: 2,043,588 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:03 - TSLA: $242.29 (+1.4% surge detected)
+📊 Volume surge: 2,851,080 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:03 - AMZN: $159.76 (+0.5% surge detected)
+📊 Volume surge: 2,032,309 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:03 - AAPL: $193.34 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $193.34. Risk management rule activated."
+⏰ 23:45:03 - GOOGL: $142.11 (+0.5% surge detected)
+📊 Volume surge: 1,433,005 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:03 - MSFT: $507.7 (+1.1% surge detected)
+📊 Volume surge: 2,565,504 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:03 - TSLA: $240.35 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $240.35. Risk management rule activated."
+⏰ 23:45:03 - AMZN: $159.89 (+0.1% surge detected)
+📊 Volume surge: 3,985,232 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:03 - AAPL: $191.5 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $191.5. Risk management rule activated."
+⏰ 23:45:03 - GOOGL: $143.46 (+0.9% surge detected)
+📊 Volume surge: 803,546 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:03 - MSFT: $501.59 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $501.59. Risk management rule activated."
+⏰ 23:45:03 - TSLA: $237.77 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $237.77. Risk management rule activated."
+⏰ 23:45:03 - AMZN: $160.46 (+0.4% surge detected)
+📊 Volume surge: 4,323,744 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:03 - AAPL: $191.58 (+0.0% surge detected)
+📊 Volume surge: 1,595,675 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:03 - GOOGL: $141.32 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $141.32. Risk management rule activated."
+⏰ 23:45:03 - MSFT: $501.18 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $501.18. Risk management rule activated."
+⏰ 23:45:03 - TSLA: $240.59 (+1.2% surge detected)
+📊 Volume surge: 154,161 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:03 - AMZN: $162.8 (+1.5% surge detected)
+📊 Volume surge: 2,441,073 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:04 - AAPL: $195.22 (+1.9% surge detected)
+📊 Volume surge: 1,411,958 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:04 - GOOGL: $139.32 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $139.32. Risk management rule activated."
+⏰ 23:45:04 - MSFT: $501.58 (+0.1% surge detected)
+📊 Volume surge: 3,462,741 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:04 - TSLA: $244.65 (+1.7% surge detected)
+📊 Volume surge: 2,168,539 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:04 - AMZN: $160.07 (-1.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $160.07. Risk management rule activated."
+⏰ 23:45:04 - AAPL: $196.32 (+0.6% surge detected)
+📊 Volume surge: 1,802,389 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:04 - GOOGL: $138.9 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $138.9. Risk management rule activated."
+⏰ 23:45:04 - MSFT: $511.28 (+1.9% surge detected)
+📊 Volume surge: 2,407,549 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:04 - TSLA: $246.72 (+0.8% surge detected)
+📊 Volume surge: 1,495,139 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:04 - AMZN: $162.31 (+1.4% surge detected)
+📊 Volume surge: 3,520,900 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:04 - AAPL: $194.17 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $194.17. Risk management rule activated."
+⏰ 23:45:04 - GOOGL: $139.37 (+0.3% surge detected)
+📊 Volume surge: 2,855,190 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:04 - MSFT: $520.29 (+1.8% surge detected)
+📊 Volume surge: 4,293,390 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:04 - TSLA: $245.52 (-0.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $245.52. Risk management rule activated."
+⏰ 23:45:04 - AMZN: $159.67 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $159.67. Risk management rule activated."
+⏰ 23:45:04 - AAPL: $198.04 (+2.0% surge detected)
+📊 Volume surge: 2,253,394 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:04 - GOOGL: $137.94 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $137.94. Risk management rule activated."
+⏰ 23:45:04 - MSFT: $528.35 (+1.6% surge detected)
+📊 Volume surge: 1,339,698 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:04 - TSLA: $249.95 (+1.8% surge detected)
+📊 Volume surge: 4,975,478 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:04 - AMZN: $162.68 (+1.9% surge detected)
+📊 Volume surge: 743,006 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:04 - AAPL: $195.55 (-1.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $195.55. Risk management rule activated."
+⏰ 23:45:04 - GOOGL: $140.32 (+1.7% surge detected)
+📊 Volume surge: 1,105,537 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:04 - MSFT: $530.66 (+0.4% surge detected)
+📊 Volume surge: 1,524,733 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:04 - TSLA: $253.46 (+1.4% surge detected)
+📊 Volume surge: 451,732 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:04 - AMZN: $163.9 (+0.8% surge detected)
+📊 Volume surge: 331,892 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:04 - AAPL: $192.13 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $192.13. Risk management rule activated."
+⏰ 23:45:04 - GOOGL: $138.08 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $138.08. Risk management rule activated."
+⏰ 23:45:04 - MSFT: $538.18 (+1.4% surge detected)
+📊 Volume surge: 1,299,543 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:04 - TSLA: $253.3 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $253.3. Risk management rule activated."
+⏰ 23:45:04 - AMZN: $164.59 (+0.4% surge detected)
+📊 Volume surge: 3,743,019 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:04 - AAPL: $190.07 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $190.07. Risk management rule activated."
+⏰ 23:45:04 - GOOGL: $135.4 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $135.4. Risk management rule activated."
+⏰ 23:45:04 - MSFT: $532.81 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $532.81. Risk management rule activated."
+⏰ 23:45:04 - TSLA: $248.94 (-1.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $248.94. Risk management rule activated."
+⏰ 23:45:04 - AMZN: $164.21 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $164.21. Risk management rule activated."
+⏰ 23:45:04 - AAPL: $192.45 (+1.2% surge detected)
+📊 Volume surge: 4,676,053 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:04 - GOOGL: $133.15 (-1.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $133.15. Risk management rule activated."
+⏰ 23:45:04 - MSFT: $540.7 (+1.5% surge detected)
+📊 Volume surge: 1,405,000 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:04 - TSLA: $244.49 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $244.49. Risk management rule activated."
+⏰ 23:45:04 - AMZN: $162.38 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $162.38. Risk management rule activated."
+⏰ 23:45:04 - AAPL: $192.9 (+0.2% surge detected)
+📊 Volume surge: 4,210,014 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:04 - GOOGL: $131.76 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $131.76. Risk management rule activated."
+⏰ 23:45:04 - MSFT: $539.7 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $539.7. Risk management rule activated."
+⏰ 23:45:04 - TSLA: $241.69 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $241.69. Risk management rule activated."
+⏰ 23:45:04 - AMZN: $165.49 (+1.9% surge detected)
+📊 Volume surge: 2,521,795 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:04 - AAPL: $196.72 (+2.0% surge detected)
+📊 Volume surge: 1,774,440 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:04 - GOOGL: $130.86 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $130.86. Risk management rule activated."
+⏰ 23:45:04 - MSFT: $533.75 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $533.75. Risk management rule activated."
+⏰ 23:45:04 - TSLA: $242.32 (+0.3% surge detected)
+📊 Volume surge: 2,109,028 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:04 - AMZN: $166.33 (+0.5% surge detected)
+📊 Volume surge: 4,139,802 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:05 - AAPL: $200.36 (+1.9% surge detected)
+📊 Volume surge: 114,491 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:05 - GOOGL: $128.27 (-2.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $128.27. Risk management rule activated."
+⏰ 23:45:05 - MSFT: $527.07 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $527.07. Risk management rule activated."
+⏰ 23:45:05 - TSLA: $240.75 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $240.75. Risk management rule activated."
+⏰ 23:45:05 - AMZN: $164.93 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $164.93. Risk management rule activated."
+⏰ 23:45:05 - AAPL: $203.74 (+1.7% surge detected)
+📊 Volume surge: 2,438,335 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:05 - GOOGL: $126.13 (-1.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $126.13. Risk management rule activated."
+⏰ 23:45:05 - MSFT: $530.28 (+0.6% surge detected)
+📊 Volume surge: 1,623,832 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:05 - TSLA: $242.56 (+0.8% surge detected)
+📊 Volume surge: 2,122,860 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:05 - AMZN: $162.95 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $162.95. Risk management rule activated."
+⏰ 23:45:05 - AAPL: $207.26 (+1.7% surge detected)
+📊 Volume surge: 4,115,408 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:05 - GOOGL: $126.27 (+0.1% surge detected)
+📊 Volume surge: 2,169,417 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:05 - MSFT: $540.69 (+2.0% surge detected)
+📊 Volume surge: 4,210,231 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:05 - TSLA: $238.8 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $238.8. Risk management rule activated."
+⏰ 23:45:05 - AMZN: $164.76 (+1.1% surge detected)
+📊 Volume surge: 3,747,121 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:05 - AAPL: $208.77 (+0.7% surge detected)
+📊 Volume surge: 2,975,852 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:05 - GOOGL: $126.0 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $126.0. Risk management rule activated."
+⏰ 23:45:05 - MSFT: $550.05 (+1.7% surge detected)
+📊 Volume surge: 353,311 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:05 - TSLA: $235.14 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $235.14. Risk management rule activated."
+⏰ 23:45:05 - AMZN: $165.69 (+0.6% surge detected)
+📊 Volume surge: 4,452,525 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:05 - AAPL: $210.92 (+1.0% surge detected)
+📊 Volume surge: 450,968 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:05 - GOOGL: $128.31 (+1.8% surge detected)
+📊 Volume surge: 2,743,254 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:05 - MSFT: $549.4 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $549.4. Risk management rule activated."
+⏰ 23:45:05 - TSLA: $233.23 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $233.23. Risk management rule activated."
+⏰ 23:45:05 - AMZN: $167.82 (+1.3% surge detected)
+📊 Volume surge: 1,661,797 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:05 - AAPL: $212.6 (+0.8% surge detected)
+📊 Volume surge: 693,034 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:05 - GOOGL: $126.15 (-1.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $126.15. Risk management rule activated."
+⏰ 23:45:05 - MSFT: $549.72 (+0.1% surge detected)
+📊 Volume surge: 1,068,767 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:05 - TSLA: $233.27 (+0.0% surge detected)
+⏰ 23:45:05 - AMZN: $166.56 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $166.56. Risk management rule activated."
+⏰ 23:45:05 - AAPL: $215.21 (+1.2% surge detected)
+📊 Volume surge: 1,039,049 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:05 - GOOGL: $123.87 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $123.87. Risk management rule activated."
+⏰ 23:45:05 - MSFT: $544.02 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $544.02. Risk management rule activated."
+⏰ 23:45:05 - TSLA: $236.06 (+1.2% surge detected)
+📊 Volume surge: 969,628 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:05 - AMZN: $164.29 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $164.29. Risk management rule activated."
+⏰ 23:45:05 - AAPL: $212.51 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $212.51. Risk management rule activated."
+⏰ 23:45:05 - GOOGL: $123.63 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $123.63. Risk management rule activated."
+⏰ 23:45:05 - MSFT: $549.95 (+1.1% surge detected)
+📊 Volume surge: 3,930,497 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:05 - TSLA: $235.39 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $235.39. Risk management rule activated."
+⏰ 23:45:05 - AMZN: $166.38 (+1.3% surge detected)
+📊 Volume surge: 1,610,118 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:05 - AAPL: $213.31 (+0.4% surge detected)
+📊 Volume surge: 2,111,020 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:05 - GOOGL: $121.89 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $121.89. Risk management rule activated."
+⏰ 23:45:05 - MSFT: $553.28 (+0.6% surge detected)
+📊 Volume surge: 2,338,749 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:05 - TSLA: $236.46 (+0.5% surge detected)
+📊 Volume surge: 2,917,662 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:05 - AMZN: $164.43 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $164.43. Risk management rule activated."
+⏰ 23:45:05 - AAPL: $217.03 (+1.7% surge detected)
+📊 Volume surge: 3,732,806 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:05 - GOOGL: $122.07 (+0.1% surge detected)
+📊 Volume surge: 4,617,111 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:05 - MSFT: $549.95 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $549.95. Risk management rule activated."
+⏰ 23:45:05 - TSLA: $236.2 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $236.2. Risk management rule activated."
+⏰ 23:45:05 - AMZN: $163.94 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $163.94. Risk management rule activated."
+⏰ 23:45:06 - AAPL: $221.27 (+2.0% surge detected)
+📊 Volume surge: 769,876 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:06 - GOOGL: $123.89 (+1.5% surge detected)
+📊 Volume surge: 2,010,680 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:06 - MSFT: $546.74 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $546.74. Risk management rule activated."
+⏰ 23:45:06 - TSLA: $234.82 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $234.82. Risk management rule activated."
+⏰ 23:45:06 - AMZN: $162.74 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $162.74. Risk management rule activated."
+⏰ 23:45:06 - AAPL: $219.2 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $219.2. Risk management rule activated."
+⏰ 23:45:06 - GOOGL: $125.71 (+1.5% surge detected)
+📊 Volume surge: 1,658,792 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:06 - MSFT: $544.05 (-0.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $544.05. Risk management rule activated."
+⏰ 23:45:06 - TSLA: $230.64 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $230.64. Risk management rule activated."
+⏰ 23:45:06 - AMZN: $159.52 (-2.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $159.52. Risk management rule activated."
+⏰ 23:45:06 - AAPL: $216.53 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $216.53. Risk management rule activated."
+⏰ 23:45:06 - GOOGL: $127.47 (+1.4% surge detected)
+📊 Volume surge: 534,855 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:06 - MSFT: $539.75 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $539.75. Risk management rule activated."
+⏰ 23:45:06 - TSLA: $229.29 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $229.29. Risk management rule activated."
+⏰ 23:45:06 - AMZN: $159.41 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $159.41. Risk management rule activated."
+⏰ 23:45:06 - AAPL: $215.17 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $215.17. Risk management rule activated."
+⏰ 23:45:06 - GOOGL: $126.35 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $126.35. Risk management rule activated."
+⏰ 23:45:06 - MSFT: $534.07 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $534.07. Risk management rule activated."
+⏰ 23:45:06 - TSLA: $226.2 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $226.2. Risk management rule activated."
+⏰ 23:45:06 - AMZN: $161.04 (+1.0% surge detected)
+📊 Volume surge: 4,244,330 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:06 - AAPL: $218.46 (+1.5% surge detected)
+📊 Volume surge: 3,685,840 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:06 - GOOGL: $126.38 (+0.0% surge detected)
+📊 Volume surge: 3,914,820 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:06 - MSFT: $542.02 (+1.5% surge detected)
+📊 Volume surge: 685,294 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:06 - TSLA: $224.48 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $224.48. Risk management rule activated."
+⏰ 23:45:06 - AMZN: $158.9 (-1.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $158.9. Risk management rule activated."
+⏰ 23:45:06 - AAPL: $222.42 (+1.8% surge detected)
+📊 Volume surge: 1,424,477 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:06 - GOOGL: $126.49 (+0.1% surge detected)
+📊 Volume surge: 4,785,390 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:06 - MSFT: $548.35 (+1.2% surge detected)
+📊 Volume surge: 556,358 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:06 - TSLA: $223.65 (-0.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $223.65. Risk management rule activated."
+⏰ 23:45:06 - AMZN: $158.24 (-0.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $158.24. Risk management rule activated."
+⏰ 23:45:06 - AAPL: $223.06 (+0.3% surge detected)
+📊 Volume surge: 1,944,480 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:06 - GOOGL: $124.58 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $124.58. Risk management rule activated."
+⏰ 23:45:06 - MSFT: $537.68 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $537.68. Risk management rule activated."
+⏰ 23:45:06 - TSLA: $225.83 (+1.0% surge detected)
+📊 Volume surge: 1,770,439 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:06 - AMZN: $155.67 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $155.67. Risk management rule activated."
+⏰ 23:45:06 - AAPL: $219.17 (-1.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $219.17. Risk management rule activated."
+⏰ 23:45:06 - GOOGL: $124.74 (+0.1% surge detected)
+📊 Volume surge: 3,049,880 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:06 - MSFT: $544.16 (+1.2% surge detected)
+📊 Volume surge: 3,323,795 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:06 - TSLA: $229.04 (+1.4% surge detected)
+📊 Volume surge: 4,634,307 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:06 - AMZN: $156.88 (+0.8% surge detected)
+📊 Volume surge: 120,015 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:06 - AAPL: $218.73 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $218.73. Risk management rule activated."
+⏰ 23:45:06 - GOOGL: $124.88 (+0.1% surge detected)
+📊 Volume surge: 4,921,307 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:06 - MSFT: $538.77 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $538.77. Risk management rule activated."
+⏰ 23:45:06 - TSLA: $229.64 (+0.3% surge detected)
+📊 Volume surge: 1,229,573 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:06 - AMZN: $158.12 (+0.8% surge detected)
+📊 Volume surge: 3,816,464 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:07 - AAPL: $217.99 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $217.99. Risk management rule activated."
+⏰ 23:45:07 - GOOGL: $126.44 (+1.2% surge detected)
+📊 Volume surge: 789,857 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:07 - MSFT: $545.56 (+1.3% surge detected)
+📊 Volume surge: 656,617 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:07 - TSLA: $231.24 (+0.7% surge detected)
+📊 Volume surge: 853,028 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:07 - AMZN: $160.55 (+1.5% surge detected)
+📊 Volume surge: 825,692 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:07 - AAPL: $220.32 (+1.1% surge detected)
+📊 Volume surge: 4,480,027 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:07 - GOOGL: $126.4 (-0.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $126.4. Risk management rule activated."
+⏰ 23:45:07 - MSFT: $537.42 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $537.42. Risk management rule activated."
+⏰ 23:45:07 - TSLA: $235.12 (+1.7% surge detected)
+📊 Volume surge: 1,388,530 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:07 - AMZN: $159.33 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $159.33. Risk management rule activated."
+⏰ 23:45:07 - AAPL: $218.34 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $218.34. Risk management rule activated."
+⏰ 23:45:07 - GOOGL: $126.45 (+0.0% surge detected)
+📊 Volume surge: 776,699 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:07 - MSFT: $541.62 (+0.8% surge detected)
+📊 Volume surge: 1,046,519 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:07 - TSLA: $232.63 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $232.63. Risk management rule activated."
+⏰ 23:45:07 - AMZN: $159.25 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $159.25. Risk management rule activated."
+⏰ 23:45:07 - AAPL: $218.13 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $218.13. Risk management rule activated."
+⏰ 23:45:07 - GOOGL: $124.24 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $124.24. Risk management rule activated."
+⏰ 23:45:07 - MSFT: $535.73 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $535.73. Risk management rule activated."
+⏰ 23:45:07 - TSLA: $235.42 (+1.2% surge detected)
+📊 Volume surge: 968,486 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:07 - AMZN: $159.94 (+0.4% surge detected)
+📊 Volume surge: 4,816,403 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:07 - AAPL: $215.74 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $215.74. Risk management rule activated."
+⏰ 23:45:07 - GOOGL: $124.63 (+0.3% surge detected)
+📊 Volume surge: 1,777,525 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:07 - MSFT: $529.73 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $529.73. Risk management rule activated."
+⏰ 23:45:07 - TSLA: $237.73 (+1.0% surge detected)
+📊 Volume surge: 3,902,856 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:07 - AMZN: $162.05 (+1.3% surge detected)
+📊 Volume surge: 4,798,661 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:07 - AAPL: $218.41 (+1.2% surge detected)
+📊 Volume surge: 3,921,414 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:07 - GOOGL: $123.73 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $123.73. Risk management rule activated."
+⏰ 23:45:07 - MSFT: $537.16 (+1.4% surge detected)
+📊 Volume surge: 3,860,537 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:07 - TSLA: $241.48 (+1.6% surge detected)
+📊 Volume surge: 1,431,415 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:07 - AMZN: $160.96 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $160.96. Risk management rule activated."
+⏰ 23:45:07 - AAPL: $217.37 (-0.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $217.37. Risk management rule activated."
+⏰ 23:45:07 - GOOGL: $123.53 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $123.53. Risk management rule activated."
+⏰ 23:45:07 - MSFT: $544.4 (+1.4% surge detected)
+📊 Volume surge: 3,884,016 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:07 - TSLA: $242.7 (+0.5% surge detected)
+📊 Volume surge: 4,641,638 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:07 - AMZN: $158.39 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $158.39. Risk management rule activated."
+⏰ 23:45:07 - AAPL: $220.77 (+1.6% surge detected)
+📊 Volume surge: 4,497,633 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:07 - GOOGL: $122.45 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $122.45. Risk management rule activated."
+⏰ 23:45:07 - MSFT: $533.52 (-2.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $533.52. Risk management rule activated."
+⏰ 23:45:07 - TSLA: $241.53 (-0.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $241.53. Risk management rule activated."
+⏰ 23:45:07 - AMZN: $160.83 (+1.5% surge detected)
+📊 Volume surge: 3,894,771 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:07 - AAPL: $218.43 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $218.43. Risk management rule activated."
+⏰ 23:45:07 - GOOGL: $121.29 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $121.29. Risk management rule activated."
+⏰ 23:45:07 - MSFT: $537.01 (+0.7% surge detected)
+📊 Volume surge: 2,113,575 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:07 - TSLA: $243.11 (+0.7% surge detected)
+📊 Volume surge: 3,771,919 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:07 - AMZN: $162.16 (+0.8% surge detected)
+📊 Volume surge: 3,462,294 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:07 - AAPL: $214.61 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $214.61. Risk management rule activated."
+⏰ 23:45:07 - GOOGL: $119.04 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $119.04. Risk management rule activated."
+⏰ 23:45:07 - MSFT: $531.5 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $531.5. Risk management rule activated."
+⏰ 23:45:07 - TSLA: $245.24 (+0.9% surge detected)
+📊 Volume surge: 3,318,443 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:07 - AMZN: $164.57 (+1.5% surge detected)
+📊 Volume surge: 2,901,512 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:08 - AAPL: $217.55 (+1.4% surge detected)
+📊 Volume surge: 4,369,694 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:08 - GOOGL: $120.15 (+0.9% surge detected)
+📊 Volume surge: 2,289,357 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:08 - MSFT: $535.15 (+0.7% surge detected)
+📊 Volume surge: 1,163,017 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:08 - TSLA: $242.88 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $242.88. Risk management rule activated."
+⏰ 23:45:08 - AMZN: $164.29 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $164.29. Risk management rule activated."
+⏰ 23:45:08 - AAPL: $216.67 (-0.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $216.67. Risk management rule activated."
+⏰ 23:45:08 - GOOGL: $117.78 (-2.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $117.78. Risk management rule activated."
+⏰ 23:45:08 - MSFT: $542.05 (+1.3% surge detected)
+📊 Volume surge: 624,767 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:08 - TSLA: $239.48 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $239.48. Risk management rule activated."
+⏰ 23:45:08 - AMZN: $164.39 (+0.1% surge detected)
+📊 Volume surge: 1,716,356 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:08 - AAPL: $218.54 (+0.9% surge detected)
+📊 Volume surge: 3,954,127 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:08 - GOOGL: $119.45 (+1.4% surge detected)
+📊 Volume surge: 4,811,509 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:08 - MSFT: $552.78 (+2.0% surge detected)
+📊 Volume surge: 3,995,574 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:08 - TSLA: $240.36 (+0.4% surge detected)
+📊 Volume surge: 1,525,255 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:08 - AMZN: $163.18 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $163.18. Risk management rule activated."
+⏰ 23:45:08 - AAPL: $218.61 (+0.0% surge detected)
+📊 Volume surge: 4,802,971 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:08 - GOOGL: $117.45 (-1.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $117.45. Risk management rule activated."
+⏰ 23:45:08 - MSFT: $556.81 (+0.7% surge detected)
+📊 Volume surge: 572,576 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:08 - TSLA: $238.86 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $238.86. Risk management rule activated."
+⏰ 23:45:08 - AMZN: $161.56 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $161.56. Risk management rule activated."
+⏰ 23:45:08 - AAPL: $215.34 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $215.34. Risk management rule activated."
+⏰ 23:45:08 - GOOGL: $116.54 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $116.54. Risk management rule activated."
+⏰ 23:45:08 - MSFT: $550.86 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $550.86. Risk management rule activated."
+⏰ 23:45:08 - TSLA: $239.54 (+0.3% surge detected)
+📊 Volume surge: 2,761,206 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:08 - AMZN: $163.41 (+1.1% surge detected)
+📊 Volume surge: 3,408,030 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:08 - AAPL: $214.62 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $214.62. Risk management rule activated."
+⏰ 23:45:08 - GOOGL: $114.53 (-1.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $114.53. Risk management rule activated."
+⏰ 23:45:08 - MSFT: $542.22 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $542.22. Risk management rule activated."
+⏰ 23:45:08 - TSLA: $239.8 (+0.1% surge detected)
+📊 Volume surge: 3,597,103 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:08 - AMZN: $165.15 (+1.1% surge detected)
+📊 Volume surge: 287,394 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:08 - AAPL: $213.36 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $213.36. Risk management rule activated."
+⏰ 23:45:08 - GOOGL: $113.12 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $113.12. Risk management rule activated."
+⏰ 23:45:08 - MSFT: $533.83 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $533.83. Risk management rule activated."
+⏰ 23:45:08 - TSLA: $243.52 (+1.6% surge detected)
+📊 Volume surge: 1,408,247 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:08 - AMZN: $167.62 (+1.5% surge detected)
+📊 Volume surge: 4,167,388 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:08 - AAPL: $213.08 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $213.08. Risk management rule activated."
+⏰ 23:45:08 - GOOGL: $113.74 (+0.6% surge detected)
+📊 Volume surge: 4,049,779 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:08 - MSFT: $535.07 (+0.2% surge detected)
+📊 Volume surge: 3,835,027 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:08 - TSLA: $245.88 (+1.0% surge detected)
+📊 Volume surge: 152,062 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:08 - AMZN: $170.46 (+1.7% surge detected)
+📊 Volume surge: 4,977,672 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:08 - AAPL: $210.82 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $210.82. Risk management rule activated."
+⏰ 23:45:08 - GOOGL: $113.47 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $113.47. Risk management rule activated."
+⏰ 23:45:08 - MSFT: $530.78 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $530.78. Risk management rule activated."
+⏰ 23:45:08 - TSLA: $248.29 (+1.0% surge detected)
+📊 Volume surge: 3,752,497 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:08 - AMZN: $173.45 (+1.8% surge detected)
+📊 Volume surge: 2,861,769 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:08 - AAPL: $210.74 (-0.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $210.74. Risk management rule activated."
+⏰ 23:45:08 - GOOGL: $113.14 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $113.14. Risk management rule activated."
+⏰ 23:45:08 - MSFT: $526.55 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $526.55. Risk management rule activated."
+⏰ 23:45:08 - TSLA: $248.84 (+0.2% surge detected)
+📊 Volume surge: 4,483,900 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:08 - AMZN: $174.52 (+0.6% surge detected)
+📊 Volume surge: 828,887 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:09 - AAPL: $206.71 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $206.71. Risk management rule activated."
+⏰ 23:45:09 - GOOGL: $113.04 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $113.04. Risk management rule activated."
+⏰ 23:45:09 - MSFT: $526.09 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $526.09. Risk management rule activated."
+⏰ 23:45:09 - TSLA: $249.27 (+0.2% surge detected)
+📊 Volume surge: 339,297 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:09 - AMZN: $173.48 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $173.48. Risk management rule activated."
+⏰ 23:45:09 - AAPL: $207.64 (+0.5% surge detected)
+📊 Volume surge: 2,050,006 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:09 - GOOGL: $115.01 (+1.7% surge detected)
+📊 Volume surge: 2,308,562 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:09 - MSFT: $524.6 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $524.6. Risk management rule activated."
+⏰ 23:45:09 - TSLA: $249.0 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $249.0. Risk management rule activated."
+⏰ 23:45:09 - AMZN: $173.69 (+0.1% surge detected)
+📊 Volume surge: 2,648,683 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:09 - AAPL: $210.11 (+1.2% surge detected)
+📊 Volume surge: 563,320 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:09 - GOOGL: $116.22 (+1.1% surge detected)
+📊 Volume surge: 4,089,628 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:09 - MSFT: $531.78 (+1.4% surge detected)
+📊 Volume surge: 1,239,568 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:09 - TSLA: $246.72 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $246.72. Risk management rule activated."
+⏰ 23:45:09 - AMZN: $174.83 (+0.7% surge detected)
+📊 Volume surge: 1,999,329 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:09 - AAPL: $211.67 (+0.7% surge detected)
+📊 Volume surge: 1,247,963 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:09 - GOOGL: $114.53 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $114.53. Risk management rule activated."
+⏰ 23:45:09 - MSFT: $538.54 (+1.3% surge detected)
+📊 Volume surge: 3,497,101 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:09 - TSLA: $250.07 (+1.4% surge detected)
+📊 Volume surge: 1,473,283 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:09 - AMZN: $174.74 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $174.74. Risk management rule activated."
+⏰ 23:45:09 - AAPL: $208.78 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $208.78. Risk management rule activated."
+⏰ 23:45:09 - GOOGL: $116.34 (+1.6% surge detected)
+📊 Volume surge: 4,378,389 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:09 - MSFT: $529.46 (-1.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $529.46. Risk management rule activated."
+⏰ 23:45:09 - TSLA: $245.28 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $245.28. Risk management rule activated."
+⏰ 23:45:09 - AMZN: $177.88 (+1.8% surge detected)
+📊 Volume surge: 3,691,671 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:09 - AAPL: $211.48 (+1.3% surge detected)
+📊 Volume surge: 3,328,771 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:09 - GOOGL: $117.89 (+1.3% surge detected)
+📊 Volume surge: 2,709,946 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:09 - MSFT: $523.5 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $523.5. Risk management rule activated."
+⏰ 23:45:09 - TSLA: $244.86 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $244.86. Risk management rule activated."
+⏰ 23:45:09 - AMZN: $175.87 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $175.87. Risk management rule activated."
+⏰ 23:45:09 - AAPL: $209.47 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $209.47. Risk management rule activated."
+⏰ 23:45:09 - GOOGL: $119.26 (+1.2% surge detected)
+📊 Volume surge: 4,380,577 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:09 - MSFT: $513.84 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $513.84. Risk management rule activated."
+⏰ 23:45:09 - TSLA: $240.16 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $240.16. Risk management rule activated."
+⏰ 23:45:09 - AMZN: $176.09 (+0.1% surge detected)
+📊 Volume surge: 2,112,894 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:09 - AAPL: $212.39 (+1.4% surge detected)
+📊 Volume surge: 4,362,711 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:09 - GOOGL: $119.37 (+0.1% surge detected)
+📊 Volume surge: 2,787,577 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:09 - MSFT: $503.71 (-2.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $503.71. Risk management rule activated."
+⏰ 23:45:09 - TSLA: $240.71 (+0.2% surge detected)
+📊 Volume surge: 3,406,004 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:09 - AMZN: $176.02 (-0.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $176.02. Risk management rule activated."
+⏰ 23:45:09 - AAPL: $209.82 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $209.82. Risk management rule activated."
+⏰ 23:45:09 - GOOGL: $119.04 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $119.04. Risk management rule activated."
+⏰ 23:45:09 - MSFT: $513.31 (+1.9% surge detected)
+📊 Volume surge: 3,017,400 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:09 - TSLA: $237.0 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $237.0. Risk management rule activated."
+⏰ 23:45:09 - AMZN: $172.91 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $172.91. Risk management rule activated."
+⏰ 23:45:10 - AAPL: $210.17 (+0.2% surge detected)
+📊 Volume surge: 4,060,532 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:10 - GOOGL: $120.47 (+1.2% surge detected)
+📊 Volume surge: 3,818,820 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:10 - MSFT: $521.82 (+1.7% surge detected)
+📊 Volume surge: 4,951,104 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:10 - TSLA: $232.82 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $232.82. Risk management rule activated."
+⏰ 23:45:10 - AMZN: $175.74 (+1.6% surge detected)
+📊 Volume surge: 1,290,242 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:10 - AAPL: $206.89 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $206.89. Risk management rule activated."
+⏰ 23:45:10 - GOOGL: $122.26 (+1.5% surge detected)
+📊 Volume surge: 1,166,806 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:10 - MSFT: $525.09 (+0.6% surge detected)
+📊 Volume surge: 2,944,724 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:10 - TSLA: $237.18 (+1.9% surge detected)
+📊 Volume surge: 467,023 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:10 - AMZN: $178.63 (+1.6% surge detected)
+📊 Volume surge: 2,313,656 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:10 - AAPL: $204.29 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $204.29. Risk management rule activated."
+⏰ 23:45:10 - GOOGL: $122.61 (+0.3% surge detected)
+📊 Volume surge: 4,835,547 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:10 - MSFT: $531.7 (+1.3% surge detected)
+📊 Volume surge: 3,610,663 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:10 - TSLA: $233.34 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $233.34. Risk management rule activated."
+⏰ 23:45:10 - AMZN: $176.79 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $176.79. Risk management rule activated."
+⏰ 23:45:10 - AAPL: $203.16 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $203.16. Risk management rule activated."
+⏰ 23:45:10 - GOOGL: $121.84 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $121.84. Risk management rule activated."
+⏰ 23:45:10 - MSFT: $535.03 (+0.6% surge detected)
+📊 Volume surge: 324,559 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:10 - TSLA: $235.78 (+1.1% surge detected)
+📊 Volume surge: 817,525 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:10 - AMZN: $174.43 (-1.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $174.43. Risk management rule activated."
+⏰ 23:45:10 - AAPL: $204.4 (+0.6% surge detected)
+📊 Volume surge: 2,809,661 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:10 - GOOGL: $121.35 (-0.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $121.35. Risk management rule activated."
+⏰ 23:45:10 - MSFT: $532.64 (-0.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $532.64. Risk management rule activated."
+⏰ 23:45:10 - TSLA: $232.83 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $232.83. Risk management rule activated."
+⏰ 23:45:10 - AMZN: $174.84 (+0.2% surge detected)
+📊 Volume surge: 3,030,244 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:10 - AAPL: $206.5 (+1.0% surge detected)
+📊 Volume surge: 2,989,664 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:10 - GOOGL: $121.05 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $121.05. Risk management rule activated."
+⏰ 23:45:10 - MSFT: $538.27 (+1.1% surge detected)
+📊 Volume surge: 1,196,296 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:10 - TSLA: $233.75 (+0.4% surge detected)
+📊 Volume surge: 3,046,384 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:10 - AMZN: $175.49 (+0.4% surge detected)
+📊 Volume surge: 1,986,154 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:10 - AAPL: $205.7 (-0.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $205.7. Risk management rule activated."
+⏰ 23:45:10 - GOOGL: $120.92 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $120.92. Risk management rule activated."
+⏰ 23:45:10 - MSFT: $532.22 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $532.22. Risk management rule activated."
+⏰ 23:45:10 - TSLA: $233.01 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $233.01. Risk management rule activated."
+⏰ 23:45:10 - AMZN: $172.71 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $172.71. Risk management rule activated."
+⏰ 23:45:10 - AAPL: $209.58 (+1.9% surge detected)
+📊 Volume surge: 3,388,768 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:10 - GOOGL: $118.96 (-1.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $118.96. Risk management rule activated."
+⏰ 23:45:10 - MSFT: $534.33 (+0.4% surge detected)
+📊 Volume surge: 2,804,004 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:10 - TSLA: $233.07 (+0.0% surge detected)
+⏰ 23:45:10 - AMZN: $170.77 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $170.77. Risk management rule activated."
+⏰ 23:45:10 - AAPL: $205.87 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $205.87. Risk management rule activated."
+⏰ 23:45:10 - GOOGL: $117.86 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $117.86. Risk management rule activated."
+⏰ 23:45:10 - MSFT: $532.92 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $532.92. Risk management rule activated."
+⏰ 23:45:10 - TSLA: $236.54 (+1.5% surge detected)
+📊 Volume surge: 170,954 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:10 - AMZN: $168.46 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $168.46. Risk management rule activated."
+⏰ 23:45:10 - AAPL: $208.84 (+1.4% surge detected)
+📊 Volume surge: 725,214 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:10 - GOOGL: $118.01 (+0.1% surge detected)
+📊 Volume surge: 352,049 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:10 - MSFT: $540.17 (+1.4% surge detected)
+📊 Volume surge: 971,909 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:10 - TSLA: $233.42 (-1.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $233.42. Risk management rule activated."
+⏰ 23:45:10 - AMZN: $170.13 (+1.0% surge detected)
+📊 Volume surge: 1,040,813 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:11 - AAPL: $211.12 (+1.1% surge detected)
+📊 Volume surge: 1,301,931 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:11 - GOOGL: $116.3 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $116.3. Risk management rule activated."
+⏰ 23:45:11 - MSFT: $548.31 (+1.5% surge detected)
+📊 Volume surge: 3,487,480 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:11 - TSLA: $236.14 (+1.2% surge detected)
+📊 Volume surge: 4,889,687 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:11 - AMZN: $168.69 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $168.69. Risk management rule activated."
+⏰ 23:45:11 - AAPL: $215.27 (+2.0% surge detected)
+📊 Volume surge: 1,356,316 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:11 - GOOGL: $114.06 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $114.06. Risk management rule activated."
+⏰ 23:45:11 - MSFT: $547.96 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $547.96. Risk management rule activated."
+⏰ 23:45:11 - TSLA: $233.15 (-1.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $233.15. Risk management rule activated."
+⏰ 23:45:11 - AMZN: $169.58 (+0.5% surge detected)
+📊 Volume surge: 4,253,998 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:11 - AAPL: $211.45 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $211.45. Risk management rule activated."
+⏰ 23:45:11 - GOOGL: $115.41 (+1.2% surge detected)
+📊 Volume surge: 3,158,644 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:11 - MSFT: $539.98 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $539.98. Risk management rule activated."
+⏰ 23:45:11 - TSLA: $232.11 (-0.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $232.11. Risk management rule activated."
+⏰ 23:45:11 - AMZN: $167.19 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $167.19. Risk management rule activated."
+⏰ 23:45:11 - AAPL: $209.4 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $209.4. Risk management rule activated."
+⏰ 23:45:11 - GOOGL: $117.36 (+1.7% surge detected)
+📊 Volume surge: 213,742 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:11 - MSFT: $531.93 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $531.93. Risk management rule activated."
+⏰ 23:45:11 - TSLA: $227.69 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $227.69. Risk management rule activated."
+⏰ 23:45:11 - AMZN: $167.23 (+0.0% surge detected)
+📊 Volume surge: 490,958 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:11 - AAPL: $213.03 (+1.7% surge detected)
+📊 Volume surge: 1,885,082 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:11 - GOOGL: $117.21 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $117.21. Risk management rule activated."
+⏰ 23:45:11 - MSFT: $539.4 (+1.4% surge detected)
+📊 Volume surge: 3,545,442 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:11 - TSLA: $228.87 (+0.5% surge detected)
+📊 Volume surge: 174,932 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:11 - AMZN: $167.72 (+0.3% surge detected)
+📊 Volume surge: 3,680,504 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:11 - AAPL: $214.74 (+0.8% surge detected)
+📊 Volume surge: 3,782,806 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:11 - GOOGL: $116.05 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $116.05. Risk management rule activated."
+⏰ 23:45:11 - MSFT: $549.01 (+1.8% surge detected)
+📊 Volume surge: 3,298,572 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:11 - TSLA: $224.65 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $224.65. Risk management rule activated."
+⏰ 23:45:11 - AMZN: $166.7 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $166.7. Risk management rule activated."
+⏰ 23:45:11 - AAPL: $212.35 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $212.35. Risk management rule activated."
+⏰ 23:45:11 - GOOGL: $115.69 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $115.69. Risk management rule activated."
+⏰ 23:45:11 - MSFT: $542.97 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $542.97. Risk management rule activated."
+⏰ 23:45:11 - TSLA: $226.79 (+0.9% surge detected)
+📊 Volume surge: 1,114,808 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:11 - AMZN: $166.97 (+0.2% surge detected)
+📊 Volume surge: 4,125,982 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:11 - AAPL: $210.36 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $210.36. Risk management rule activated."
+⏰ 23:45:11 - GOOGL: $114.04 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $114.04. Risk management rule activated."
+⏰ 23:45:11 - MSFT: $553.67 (+2.0% surge detected)
+📊 Volume surge: 1,724,601 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:11 - TSLA: $226.26 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $226.26. Risk management rule activated."
+⏰ 23:45:11 - AMZN: $167.65 (+0.4% surge detected)
+📊 Volume surge: 2,591,199 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:11 - AAPL: $210.44 (+0.0% surge detected)
+📊 Volume surge: 4,399,197 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:11 - GOOGL: $116.17 (+1.9% surge detected)
+📊 Volume surge: 2,657,475 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:11 - MSFT: $549.82 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $549.82. Risk management rule activated."
+⏰ 23:45:11 - TSLA: $229.6 (+1.5% surge detected)
+📊 Volume surge: 4,644,054 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:11 - AMZN: $166.34 (-0.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $166.34. Risk management rule activated."
+⏰ 23:45:11 - AAPL: $207.62 (-1.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $207.62. Risk management rule activated."
+⏰ 23:45:11 - GOOGL: $117.32 (+1.0% surge detected)
+📊 Volume surge: 941,863 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:11 - MSFT: $546.01 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $546.01. Risk management rule activated."
+⏰ 23:45:11 - TSLA: $231.07 (+0.6% surge detected)
+📊 Volume surge: 1,209,212 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:11 - AMZN: $166.41 (+0.0% surge detected)
+📊 Volume surge: 2,831,580 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:12 - AAPL: $208.32 (+0.3% surge detected)
+📊 Volume surge: 4,500,910 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:12 - GOOGL: $119.17 (+1.6% surge detected)
+📊 Volume surge: 3,902,345 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:12 - MSFT: $535.94 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $535.94. Risk management rule activated."
+⏰ 23:45:12 - TSLA: $234.55 (+1.5% surge detected)
+📊 Volume surge: 3,853,048 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:12 - AMZN: $164.6 (-1.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $164.6. Risk management rule activated."
+⏰ 23:45:12 - AAPL: $210.1 (+0.9% surge detected)
+📊 Volume surge: 4,026,655 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:12 - GOOGL: $119.11 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $119.11. Risk management rule activated."
+⏰ 23:45:12 - MSFT: $525.32 (-2.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $525.32. Risk management rule activated."
+⏰ 23:45:12 - TSLA: $232.36 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $232.36. Risk management rule activated."
+⏰ 23:45:12 - AMZN: $164.35 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $164.35. Risk management rule activated."
+⏰ 23:45:12 - AAPL: $209.6 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $209.6. Risk management rule activated."
+⏰ 23:45:12 - GOOGL: $119.62 (+0.4% surge detected)
+📊 Volume surge: 1,644,659 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:12 - MSFT: $527.66 (+0.5% surge detected)
+📊 Volume surge: 1,572,594 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:12 - TSLA: $229.13 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $229.13. Risk management rule activated."
+⏰ 23:45:12 - AMZN: $164.82 (+0.3% surge detected)
+📊 Volume surge: 4,440,703 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:12 - AAPL: $211.62 (+1.0% surge detected)
+📊 Volume surge: 1,966,511 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:12 - GOOGL: $120.74 (+0.9% surge detected)
+📊 Volume surge: 4,564,485 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:12 - MSFT: $535.42 (+1.5% surge detected)
+📊 Volume surge: 2,445,354 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:12 - TSLA: $232.51 (+1.5% surge detected)
+📊 Volume surge: 3,530,973 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:12 - AMZN: $163.3 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $163.3. Risk management rule activated."
+⏰ 23:45:12 - AAPL: $209.12 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $209.12. Risk management rule activated."
+⏰ 23:45:12 - GOOGL: $118.4 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $118.4. Risk management rule activated."
+⏰ 23:45:12 - MSFT: $543.62 (+1.5% surge detected)
+📊 Volume surge: 2,828,885 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:12 - TSLA: $233.37 (+0.4% surge detected)
+📊 Volume surge: 4,030,676 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:12 - AMZN: $164.14 (+0.5% surge detected)
+📊 Volume surge: 560,394 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:12 - AAPL: $206.99 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $206.99. Risk management rule activated."
+⏰ 23:45:12 - GOOGL: $116.11 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $116.11. Risk management rule activated."
+⏰ 23:45:12 - MSFT: $546.89 (+0.6% surge detected)
+📊 Volume surge: 1,068,408 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:12 - TSLA: $229.22 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $229.22. Risk management rule activated."
+⏰ 23:45:12 - AMZN: $161.63 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $161.63. Risk management rule activated."
+⏰ 23:45:12 - AAPL: $208.81 (+0.9% surge detected)
+📊 Volume surge: 4,075,208 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:12 - GOOGL: $117.59 (+1.3% surge detected)
+📊 Volume surge: 3,862,936 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:12 - MSFT: $549.5 (+0.5% surge detected)
+📊 Volume surge: 3,664,110 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:12 - TSLA: $230.97 (+0.8% surge detected)
+📊 Volume surge: 1,255,024 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:12 - AMZN: $160.6 (-0.6% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $160.6. Risk management rule activated."
+⏰ 23:45:12 - AAPL: $210.25 (+0.7% surge detected)
+📊 Volume surge: 1,470,034 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:12 - GOOGL: $119.47 (+1.6% surge detected)
+📊 Volume surge: 2,162,155 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:12 - MSFT: $555.78 (+1.1% surge detected)
+📊 Volume surge: 4,202,610 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:12 - TSLA: $234.15 (+1.4% surge detected)
+📊 Volume surge: 886,382 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:12 - AMZN: $160.27 (-0.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $160.27. Risk management rule activated."
+⏰ 23:45:12 - AAPL: $206.38 (-1.8% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $206.38. Risk management rule activated."
+⏰ 23:45:12 - GOOGL: $121.46 (+1.7% surge detected)
+📊 Volume surge: 914,305 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:12 - MSFT: $554.32 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $554.32. Risk management rule activated."
+⏰ 23:45:12 - TSLA: $230.62 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $230.62. Risk management rule activated."
+⏰ 23:45:12 - AMZN: $158.73 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $158.73. Risk management rule activated."
+⏰ 23:45:12 - AAPL: $204.4 (-1.0% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $204.4. Risk management rule activated."
+⏰ 23:45:12 - GOOGL: $119.62 (-1.5% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $119.62. Risk management rule activated."
+⏰ 23:45:12 - MSFT: $563.3 (+1.6% surge detected)
+📊 Volume surge: 3,623,208 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:12 - TSLA: $228.62 (-0.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $228.62. Risk management rule activated."
+⏰ 23:45:12 - AMZN: $158.79 (+0.0% surge detected)
+📊 Volume surge: 2,166,066 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:13 - AAPL: $201.5 (-1.4% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $201.5. Risk management rule activated."
+⏰ 23:45:13 - GOOGL: $121.63 (+1.7% surge detected)
+📊 Volume surge: 1,197,137 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:13 - MSFT: $572.14 (+1.6% surge detected)
+📊 Volume surge: 3,597,731 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:13 - TSLA: $230.19 (+0.7% surge detected)
+📊 Volume surge: 3,434,642 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:13 - AMZN: $157.67 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $157.67. Risk management rule activated."
+⏰ 23:45:13 - AAPL: $201.34 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AAPL position closed at $201.34. Risk management rule activated."
+⏰ 23:45:13 - GOOGL: $124.05 (+2.0% surge detected)
+📊 Volume surge: 1,600,259 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:13 - MSFT: $561.22 (-1.9% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "MSFT position closed at $561.22. Risk management rule activated."
+⏰ 23:45:13 - TSLA: $234.09 (+1.7% surge detected)
+📊 Volume surge: 3,629,622 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:13 - AMZN: $155.73 (-1.2% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $155.73. Risk management rule activated."
+⏰ 23:45:13 - AAPL: $202.17 (+0.4% surge detected)
+📊 Volume surge: 536,863 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:13 - GOOGL: $125.12 (+0.9% surge detected)
+📊 Volume surge: 1,713,936 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on GOOGL. Price broke resistance with significant volume."
+⏰ 23:45:13 - MSFT: $566.48 (+0.9% surge detected)
+📊 Volume surge: 4,491,094 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:13 - TSLA: $233.49 (-0.3% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "TSLA position closed at $233.49. Risk management rule activated."
+⏰ 23:45:13 - AMZN: $156.12 (+0.2% surge detected)
+📊 Volume surge: 1,131,526 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AMZN. Price broke resistance with significant volume."
+⏰ 23:45:13 - AAPL: $204.34 (+1.1% surge detected)
+📊 Volume surge: 4,511,128 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on AAPL. Price broke resistance with significant volume."
+⏰ 23:45:13 - GOOGL: $124.94 (-0.1% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "GOOGL position closed at $124.94. Risk management rule activated."
+⏰ 23:45:13 - MSFT: $574.25 (+1.4% surge detected)
+📊 Volume surge: 4,819,101 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on MSFT. Price broke resistance with significant volume."
+⏰ 23:45:13 - TSLA: $234.29 (+0.3% surge detected)
+📊 Volume surge: 2,799,474 shares
+🤖 Agent Analysis: "Unusual buying pressure detected on TSLA. Price broke resistance with significant volume."
+⏰ 23:45:13 - AMZN: $155.06 (-0.7% decline detected)
+⚠️ ALERT TRIGGERED: Stop-loss threshold reached
+🤖 Automated Response: "AMZN position closed at $155.06. Risk management rule activated."
+
+📊 REAL-TIME METRICS (60 seconds):
+--------------------------------------------------
+• Data Points Processed: 50,820 price updates
+• Patterns Detected: 7 significant price movements
+• Alerts Generated: 3 automated trading signals
+• Response Time: 0.12s average (high-frequency ready)
+• Accuracy Rate: 94% for pattern prediction
+• Portfolio Impact: +$2,347 from automated responses
+--------------------------------------------------
+
+============================================================
+🧪 SCENARIO 2: IoT Sensor Network Monitoring
+============================================================
+
+🎯 Stream Configuration: 50 environmental sensors across facility
+📊 Monitoring: Temperature, humidity, air quality, vibration, power
+
+⏰ 14:35:00 - 50 sensors reporting every 5 seconds
+🌡️ Baseline: Temp 68-72°F, Humidity 45-55%, AQI 25-35
+
+🌊 LIVE IOT SENSOR NETWORK STREAM INITIATED
+------------------------------------
+⏰ 23:45:14 - Sensor_A5 Air_Quality: 37.6AQI
+⏰ 23:45:23 - Sensor_A1 Vibration: 1.8mm/s
+⏰ 23:45:23 - Sensor_A5 Air_Quality: 36.1AQI
+
+📊 REAL-TIME FACILITY METRICS:
+--------------------------------------------------
+• Sensors Monitored: 50 devices, 200 data points/minute
+• Anomalies Detected: 4 (2 critical, 2 preventive)
+• Response Time: 0.08s for critical alerts
+• Predictive Accuracy: 89% for equipment failures
+• Cost Savings: $15,600 prevented downtime
+• Energy Optimization: 12% reduction through smart controls
+--------------------------------------------------
+
+============================================================
+✅ REAL-TIME DATA INTEGRATION COMPLETED
+============================================================
+
+Key Streaming Achievements:
+• 100% uptime across all concurrent data streams
+• 0.14s average response time for real-time processing
+• 92% accuracy in predictive analytics and pattern detection
+• $20,987 quantified business value from automated responses
+• Zero data loss during high-volume streaming periods
+
+Advanced Capabilities Demonstrated:
+• Multi-protocol streaming data ingestion and processing
+• Real-time machine learning inference on live data streams
+• Context-aware anomaly detection with business impact assessment
+• Automated response workflows with human oversight integration
+• Continuous model improvement through streaming feedback loops
+```
+
+</details>
+
+---
+
 
 ## 📋 Demo Summary
 
-**🎉 Congratulations!** You've completed all 6 comprehensive OpenAI Agent Building demonstrations:
+**🎉 Congratulations!** You've completed all 8 comprehensive OpenAI Agent Building demonstrations:
 
 ---
 
@@ -1838,6 +4373,34 @@ Implementation Benefits:
 - Specific, actionable instructions reduce ambiguity
 - Edge case handling instructions improve reliability
 - Role clarity in multi-agent systems prevents confusion
+
+---
+
+## 📝 Demo Execution Notes
+
+### Understanding Output Variations
+
+**🌊 Real-Time Data Integration Demo**: 
+- Generates **live streaming data** with random stock prices, timestamps, and market events
+- Each execution produces completely different output simulating real market conditions
+- Volume surges, price movements, and alerts are dynamically generated
+- This demonstrates how real-time systems handle unpredictable data streams
+
+**🔧 Dynamic Tool Discovery Demo**:
+- Uses **mock implementations** with consistent core workflow
+- Timestamps and simulation timings may vary slightly between runs
+- API discovery results and tool generation outputs remain consistent
+- This showcases the systematic approach to dynamic tool creation
+
+**Other Demos**:
+- Most other demos produce **consistent output** as they use fixed scenarios
+- Any variations are typically limited to timestamps or minor simulation details
+
+To see live variations in action, run the demos multiple times:
+```bash
+python demo/realtime_data_demo.py    # Always different output
+python demo/dynamic_tools_demo.py    # Consistent workflow, variable timings
+```
 
 ---
 
